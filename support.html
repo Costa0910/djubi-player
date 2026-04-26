@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Djubi Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="floating-header">
+      <div class="nav-island shell">
+        <div class="core nav-core">
+          <a class="brand" href="index.html"><span class="brand-dot"></span><span><h1 data-i18n="brandName"></h1><p data-i18n="brandTagline"></p></span></a>
+          <nav class="nav-links">
+            <a href="index.html" data-i18n="navHome"></a>
+            <a href="screenshots.html" data-i18n="navScreenshots"></a>
+            <a href="downloads.html" data-i18n="navDownloads"></a>
+            <a href="web.html" data-i18n="navWeb"></a>
+            <a href="faq.html" data-i18n="navFaq"></a>
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a class="active" href="support.html" data-i18n="navSupport"></a>
+          </nav>
+          <div class="header-actions">
+            <div class="lang-switch"><button data-locale="en_US">EN</button><button data-locale="pt_PT">PT</button></div>
+            <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobileOverlay" class="mobile-overlay">
+      <div class="mobile-menu shell">
+        <div class="core">
+          <nav class="mobile-menu-links">
+            <a href="index.html" data-i18n="navHome"></a>
+            <a href="screenshots.html" data-i18n="navScreenshots"></a>
+            <a href="downloads.html" data-i18n="navDownloads"></a>
+            <a href="web.html" data-i18n="navWeb"></a>
+            <a href="faq.html" data-i18n="navFaq"></a>
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a class="active" href="support.html" data-i18n="navSupport"></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-spacer"></div>
+
+    <main class="container section">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-lang="en_US">Support center</span>
+        <span class="eyebrow" data-lang="pt_PT">Centro de suporte</span>
+        <h2 data-lang="en_US">Fast path for technical and account requests.</h2>
+        <h2 data-lang="pt_PT">Canal direto para pedidos técnicos e de conta.</h2>
+      </div>
+
+      <section class="list-shell" data-reveal>
+        <div class="list-core">
+          <article class="list-item">
+            <h3 data-lang="en_US">Primary channels</h3>
+            <h3 data-lang="pt_PT">Canais principais</h3>
+            <p>
+              Email: <a href="mailto:support@djubi.app">support@djubi.app</a><br />
+              GitHub: <a href="https://github.com/Costa0910/djubi/issues" target="_blank" rel="noopener">Costa0910/djubi/issues</a>
+            </p>
+          </article>
+
+          <article class="list-item">
+            <h3 data-lang="en_US">Include this in your request</h3>
+            <h3 data-lang="pt_PT">Incluir no pedido</h3>
+            <p data-lang="en_US">App version, platform, source type, and a short reproducible description with screenshots when possible.</p>
+            <p data-lang="pt_PT">Versão da app, plataforma, tipo de origem e uma descrição reproduzível com capturas quando possível.</p>
+          </article>
+
+          <article class="list-item">
+            <h3 data-lang="en_US">Response policy</h3>
+            <h3 data-lang="pt_PT">Política de resposta</h3>
+            <p data-lang="en_US">Requests are handled by severity and submission order.</p>
+            <p data-lang="pt_PT">Os pedidos são tratados por severidade e ordem de submissão.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container"><p data-i18n="footerText"></p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

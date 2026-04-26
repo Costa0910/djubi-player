@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Djubi Privacy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="floating-header">
+      <div class="nav-island shell">
+        <div class="core nav-core">
+          <a class="brand" href="index.html"><span class="brand-dot"></span><span><h1 data-i18n="brandName"></h1><p data-i18n="brandTagline"></p></span></a>
+          <nav class="nav-links">
+            <a href="index.html" data-i18n="navHome"></a>
+            <a href="screenshots.html" data-i18n="navScreenshots"></a>
+            <a href="downloads.html" data-i18n="navDownloads"></a>
+            <a href="web.html" data-i18n="navWeb"></a>
+            <a href="faq.html" data-i18n="navFaq"></a>
+            <a class="active" href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+          </nav>
+          <div class="header-actions">
+            <div class="lang-switch"><button data-locale="en_US">EN</button><button data-locale="pt_PT">PT</button></div>
+            <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobileOverlay" class="mobile-overlay">
+      <div class="mobile-menu shell">
+        <div class="core">
+          <nav class="mobile-menu-links">
+            <a href="index.html" data-i18n="navHome"></a>
+            <a href="screenshots.html" data-i18n="navScreenshots"></a>
+            <a href="downloads.html" data-i18n="navDownloads"></a>
+            <a href="web.html" data-i18n="navWeb"></a>
+            <a href="faq.html" data-i18n="navFaq"></a>
+            <a class="active" href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-spacer"></div>
+
+    <main class="container section">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-lang="en_US">Trust layer</span>
+        <span class="eyebrow" data-lang="pt_PT">Camada de confiança</span>
+        <h2 data-lang="en_US">Privacy commitments for Djubi users.</h2>
+        <h2 data-lang="pt_PT">Compromissos de privacidade para utilizadores Djubi.</h2>
+      </div>
+
+      <section class="list-shell" data-reveal>
+        <div class="list-core">
+          <article class="list-item">
+            <h3 data-lang="en_US">Local data usage</h3>
+            <h3 data-lang="pt_PT">Uso de dados local</h3>
+            <p data-lang="en_US">Playlist data and playback preferences are stored on your device to deliver core functionality.</p>
+            <p data-lang="pt_PT">Dados de playlists e preferências de reprodução são guardados no dispositivo para fornecer funcionalidade principal.</p>
+          </article>
+
+          <article class="list-item">
+            <h3 data-lang="en_US">Credentials and sources</h3>
+            <h3 data-lang="pt_PT">Credenciais e fontes</h3>
+            <p data-lang="en_US">You remain responsible for IPTV credentials and source integrity from your provider.</p>
+            <p data-lang="pt_PT">O utilizador mantém responsabilidade pelas credenciais IPTV e integridade da origem do fornecedor.</p>
+          </article>
+
+          <article class="list-item">
+            <h3 data-lang="en_US">Cloud synchronization</h3>
+            <h3 data-lang="pt_PT">Sincronização cloud</h3>
+            <p data-lang="en_US">
+              When enabled, selected settings can sync through Apple account services. Djubi does not sell personal data.
+            </p>
+            <p data-lang="pt_PT">
+              Quando ativa, algumas definições podem sincronizar através dos serviços da conta Apple. O Djubi não vende dados pessoais.
+            </p>
+          </article>
+
+          <article class="list-item">
+            <h3 data-lang="en_US">Support contact</h3>
+            <h3 data-lang="pt_PT">Contacto de suporte</h3>
+            <p data-lang="en_US">For legal or account-specific requests, contact support@djubi.app.</p>
+            <p data-lang="pt_PT">Para pedidos legais ou específicos de conta, contacte support@djubi.app.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container"><p data-i18n="footerText"></p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

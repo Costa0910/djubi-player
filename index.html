@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Djubi Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="floating-header">
+      <div class="nav-island shell">
+        <div class="core nav-core">
+          <a class="brand" href="index.html">
+            <span class="brand-dot" aria-hidden="true"></span>
+            <span>
+              <h1 data-i18n="brandName"></h1>
+              <p data-i18n="brandTagline"></p>
+            </span>
+          </a>
+
+          <nav class="nav-links">
+            <a class="active" href="index.html" data-i18n="navHome"></a>
+            <a href="screenshots.html" data-i18n="navScreenshots"></a>
+            <a href="downloads.html" data-i18n="navDownloads"></a>
+            <a href="web.html" data-i18n="navWeb"></a>
+            <a href="faq.html" data-i18n="navFaq"></a>
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+          </nav>
+
+          <div class="header-actions">
+            <div class="lang-switch" aria-label="Language selector">
+              <button data-locale="en_US">EN</button>
+              <button data-locale="pt_PT">PT</button>
+            </div>
+            <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+              <span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobileOverlay" class="mobile-overlay">
+      <div class="mobile-menu shell">
+        <div class="core">
+          <nav class="mobile-menu-links">
+            <a class="active" href="index.html" data-i18n="navHome"></a>
+            <a href="screenshots.html" data-i18n="navScreenshots"></a>
+            <a href="downloads.html" data-i18n="navDownloads"></a>
+            <a href="web.html" data-i18n="navWeb"></a>
+            <a href="faq.html" data-i18n="navFaq"></a>
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-spacer"></div>
+
+    <main class="container">
+      <section class="hero">
+        <div data-reveal>
+          <span class="eyebrow" data-lang="en_US">Apple-native IPTV</span>
+          <span class="eyebrow" data-lang="pt_PT">IPTV nativo Apple</span>
+
+          <h2 data-lang="en_US">Precision playback for serious IPTV users on macOS, iPhone, and iPad.</h2>
+          <h2 data-lang="pt_PT">Reprodução precisa para utilizadores IPTV exigentes em macOS, iPhone e iPad.</h2>
+
+          <p data-lang="en_US">
+            Djubi Player combines fast playlist ingestion, stable multi-engine playback, EPG timeline control, and multi-view workflows in
+            one focused product surface.
+          </p>
+          <p data-lang="pt_PT">
+            O Djubi Player combina ingestão rápida de playlists, reprodução estável com múltiplos motores, controlo de timeline EPG e
+            workflows multi-view numa experiência única.
+          </p>
+
+          <div class="button-row">
+            <a class="btn primary" href="downloads.html" data-i18n="ctaDownload">
+              <span></span>
+              <span class="btn-icon">↗</span>
+            </a>
+            <a class="btn secondary" href="screenshots.html" data-i18n="ctaScreens">
+              <span></span>
+              <span class="btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-panel" data-reveal data-reveal-delay="110">
+          <article class="panel-card wide">
+            <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Djubi macOS player view" />
+          </article>
+          <article class="panel-card">
+            <img src="assets/screenshots/iphone/player-en.png" data-src-en="assets/screenshots/iphone/player-en.png" data-src-pt="assets/screenshots/iphone/player-pt.png" alt="Djubi iPhone player view" />
+          </article>
+          <article class="panel-card">
+            <img src="assets/screenshots/ipad/player-en.png" data-src-en="assets/screenshots/ipad/player-en.png" data-src-pt="assets/screenshots/ipad/player-pt.png" alt="Djubi iPad player view" />
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow" data-lang="en_US">System design</span>
+          <span class="eyebrow" data-lang="pt_PT">Arquitetura do sistema</span>
+          <h2 data-lang="en_US">Every interaction has operational intent.</h2>
+          <h2 data-lang="pt_PT">Cada interação tem intenção operacional.</h2>
+          <p data-lang="en_US">
+            The platform is structured around import speed, playback resilience, and clarity at high channel volume. This site mirrors that
+            same design philosophy.
+          </p>
+          <p data-lang="pt_PT">
+            A plataforma está estruturada para velocidade de importação, robustez de reprodução e clareza em grandes volumes de canais.
+            Este site segue a mesma filosofia de design.
+          </p>
+        </div>
+
+        <div class="bento">
+          <div class="stack">
+            <article class="feature-shell" data-reveal>
+              <div class="feature-core">
+                <h3 data-lang="en_US">Import pipeline</h3>
+                <h3 data-lang="pt_PT">Pipeline de importação</h3>
+                <p data-lang="en_US">
+                  M3U, M3U8, and Xtream ingest with fast-first workflows designed for very large libraries.
+                </p>
+                <p data-lang="pt_PT">Ingestão M3U, M3U8 e Xtream com fluxos fast-first para bibliotecas muito extensas.</p>
+                <div class="line-list">
+                  <div><span data-lang="en_US">Fast mode</span><span data-lang="pt_PT">Modo rápido</span><span>~30s</span></div>
+                  <div><span data-lang="en_US">Balanced mode</span><span data-lang="pt_PT">Modo equilibrado</span><span>~1-2 min</span></div>
+                  <div><span data-lang="en_US">Robust mode</span><span data-lang="pt_PT">Modo robusto</span><span>~5-6 min</span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-shell" data-reveal data-reveal-delay="90">
+              <div class="feature-core">
+                <h3 data-lang="en_US">Playback stack</h3>
+                <h3 data-lang="pt_PT">Stack de reprodução</h3>
+                <p data-lang="en_US">Multi-engine playback with subtitle and track control, fullscreen, PiP, and stream fallback paths.</p>
+                <p data-lang="pt_PT">Reprodução multi-motor com controlo de legendas/faixas, fullscreen, PiP e fallback de streams.</p>
+              </div>
+            </article>
+          </div>
+
+          <article class="feature-shell" data-reveal data-reveal-delay="140">
+            <div class="feature-core">
+              <h3 data-lang="en_US">Operations layer</h3>
+              <h3 data-lang="pt_PT">Camada operacional</h3>
+              <p data-lang="en_US">
+                EPG timeline mapping, scheduled recordings, conflict detection, and multi-view slots are integrated without interface
+                fragmentation.
+              </p>
+              <p data-lang="pt_PT">
+                Mapeamento EPG por timeline, gravações agendadas, deteção de conflitos e slots multi-view integrados sem fragmentação da
+                interface.
+              </p>
+              <div class="line-list">
+                <div><span>EPG XMLTV</span><span data-lang="en_US">Timeline guide</span><span data-lang="pt_PT">Guia em timeline</span></div>
+                <div><span data-lang="en_US">Recordings</span><span data-lang="pt_PT">Gravações</span><span data-lang="en_US">Scheduled + limits</span><span data-lang="pt_PT">Agendado + limites</span></div>
+                <div><span>Multi-view</span><span data-lang="en_US">Up to 9 streams</span><span data-lang="pt_PT">Até 9 streams</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p data-i18n="footerText"></p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
