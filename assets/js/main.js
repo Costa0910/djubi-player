@@ -287,6 +287,58 @@ function setupMultiviewDemo() {
 }
 
 /**
+ * Setup lightbox for screenshot gallery
+ */
+function setupLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  
+  if (!lightbox || !triggers.length) return;
+
+  const openLightbox = (img) => {
+    const src = img.src;
+    const captionKey = locale === 'pt_PT' ? 'captionPt' : 'captionEn';
+    const caption = img.dataset[captionKey] || img.alt;
+    
+    lightboxImage.src = src;
+    lightboxImage.alt = img.alt;
+    lightboxCaption.textContent = caption;
+    
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => openLightbox(trigger));
+    trigger.style.cursor = 'zoom-in';
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+}
+
+/**
  * Initialize when DOM is ready
  */
 document.addEventListener("DOMContentLoaded", () => {
@@ -299,6 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCardInteractions();
   setupStatsAnimation();
   setupMultiviewDemo();
+  setupLightbox();
 });
 
 // Add CSS keyframes for stats animation
