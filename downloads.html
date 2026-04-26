@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Djubi Player Download</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Download - Djubi Player</title>
+    <meta name="description" content="Download Djubi Player for macOS, iPhone, and iPad. Universal build for Apple Silicon and Intel." />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <header class="floating-header">
       <div class="nav-island shell">
         <div class="core nav-core">
-          <a class="brand" href="index.html"><span class="brand-dot"></span><span><h1 data-i18n="brandName"></h1><p data-i18n="brandTagline"></p></span></a>
+          <a class="brand" href="index.html">
+            <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
+            <span><h1 data-i18n="brandName"></h1></span>
+          </a>
           <nav class="nav-links">
             <a href="index.html" data-i18n="navHome"></a>
             <a href="screenshots.html" data-i18n="navScreenshots"></a>
@@ -53,18 +56,28 @@
       <div class="section-head" data-reveal>
         <span class="eyebrow" data-lang="en_US">Distribution</span>
         <span class="eyebrow" data-lang="pt_PT">Distribuição</span>
-        <h2 data-lang="en_US">Download Djubi Player by platform.</h2>
-        <h2 data-lang="pt_PT">Transferir Djubi Player por plataforma.</h2>
+        <h2 data-lang="en_US">Download Djubi Player</h2>
+        <h2 data-lang="pt_PT">Transferir Djubi Player</h2>
+        <p data-lang="en_US">Choose your platform and get started in minutes.</p>
+        <p data-lang="pt_PT">Escolha a sua plataforma e comece em minutos.</p>
       </div>
 
       <section class="list-shell" data-reveal>
         <div class="list-core">
           <article class="list-item">
             <div class="split-line">
-              <h3 data-lang="en_US">macOS</h3>
-              <h3 data-lang="pt_PT">macOS</h3>
+              <div>
+                <h3 data-lang="en_US">macOS</h3>
+                <h3 data-lang="pt_PT">macOS</h3>
+              </div>
               <a class="btn primary" href="https://github.com/Costa0910/djubi/releases" target="_blank" rel="noopener">
-                <span data-lang="en_US">Get build</span><span data-lang="pt_PT">Obter build</span><span class="btn-icon">↗</span>
+                <span data-lang="en_US">Get build</span>
+                <span data-lang="pt_PT">Obter build</span>
+                <span class="btn-icon" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
               </a>
             </div>
             <p data-lang="en_US">Universal build for Apple Silicon and Intel machines.</p>
@@ -73,19 +86,21 @@
 
           <article class="list-item">
             <div class="split-line">
-              <h3 data-lang="en_US">iOS / iPadOS</h3>
-              <h3 data-lang="pt_PT">iOS / iPadOS</h3>
-              <span class="badge" data-lang="en_US">Public link soon</span>
-              <span class="badge" data-lang="pt_PT">Link público em breve</span>
+              <div>
+                <h3 data-lang="en_US">iOS / iPadOS</h3>
+                <h3 data-lang="pt_PT">iOS / iPadOS</h3>
+              </div>
+              <span class="badge" data-lang="en_US">Coming soon</span>
+              <span class="badge" data-lang="pt_PT">Em breve</span>
             </div>
             <p data-lang="en_US">Touch-optimized interface with synchronized settings and playback behavior.</p>
             <p data-lang="pt_PT">Interface otimizada para toque com definições sincronizadas e comportamento de reprodução consistente.</p>
           </article>
 
           <article class="list-item">
-            <h3 data-lang="en_US">Current requirements</h3>
-            <h3 data-lang="pt_PT">Requisitos atuais</h3>
-            <p data-lang="en_US">macOS 14+ and iOS 16+ are required for the current production builds.</p>
+            <h3 data-lang="en_US">System requirements</h3>
+            <h3 data-lang="pt_PT">Requisitos de sistema</h3>
+            <p data-lang="en_US">macOS 14+ and iOS 16+ are required for current production builds.</p>
             <p data-lang="pt_PT">macOS 14+ e iOS 16+ são necessários para os builds de produção atuais.</p>
           </article>
         </div>
