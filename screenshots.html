@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Screenshots - Djubi Player</title>
     <meta name="description" content="Explore Djubi Player interface across macOS, iPhone, and iPad. See channel lists, player views, and multi-view layouts." />
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg" aria-hidden="true">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
     <header class="floating-header">
-      <div class="nav-island shell">
-        <div class="core nav-core">
+      <div class="nav-island">
+        <div class="nav-core">
           <a class="brand" href="index.html">
             <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
-            <span><h1 data-i18n="brandName"></h1></span>
+            <h1 data-i18n="brandName"></h1>
           </a>
           <nav class="nav-links">
             <a href="index.html" data-i18n="navHome"></a>
@@ -23,7 +30,6 @@
             <a href="downloads.html" data-i18n="navDownloads"></a>
             <a href="web.html" data-i18n="navWeb"></a>
             <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
             <a href="support.html" data-i18n="navSupport"></a>
           </nav>
           <div class="header-actions">
@@ -34,130 +40,163 @@
       </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobileOverlay" class="mobile-overlay">
-      <div class="mobile-menu shell">
-        <div class="core">
-          <nav class="mobile-menu-links">
-            <a href="index.html" data-i18n="navHome"></a>
-            <a class="active" href="screenshots.html" data-i18n="navScreenshots"></a>
-            <a href="downloads.html" data-i18n="navDownloads"></a>
-            <a href="web.html" data-i18n="navWeb"></a>
-            <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
-            <a href="support.html" data-i18n="navSupport"></a>
-          </nav>
-        </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+          <a href="index.html" data-i18n="navHome"></a>
+          <a class="active" href="screenshots.html" data-i18n="navScreenshots"></a>
+          <a href="downloads.html" data-i18n="navDownloads"></a>
+          <a href="web.html" data-i18n="navWeb"></a>
+          <a href="faq.html" data-i18n="navFaq"></a>
+          <a href="privacy.html" data-i18n="navPrivacy"></a>
+          <a href="support.html" data-i18n="navSupport"></a>
+        </nav>
       </div>
     </div>
 
     <div class="top-spacer"></div>
 
-    <main class="container section">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow" data-lang="en_US">Visual tour</span>
-        <span class="eyebrow" data-lang="pt_PT">Tour visual</span>
-        <h2 data-lang="en_US">Complete interface across all platforms</h2>
-        <h2 data-lang="pt_PT">Interface completa em todas as plataformas</h2>
-        <p data-lang="en_US">Explore how Djubi Player looks and works on macOS, iPhone, and iPad.</p>
-        <p data-lang="pt_PT">Explore como o Djubi Player funciona em macOS, iPhone e iPad.</p>
-      </div>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow" data-lang="en_US">Gallery</span>
+            <span class="eyebrow" data-lang="pt_PT">Galeria</span>
+            <h2 data-lang="en_US">See Djubi in action</h2>
+            <h2 data-lang="pt_PT">Veja o Djubi em ação</h2>
+            <p data-lang="en_US">Explore the interface across all platforms. Clean, fast, and beautifully designed.</p>
+            <p data-lang="pt_PT">Explore a interface em todas as plataformas. Limpa, rápida e lindamente desenhada.</p>
+          </div>
 
-      <div class="section-head" data-reveal>
-        <h2 data-lang="en_US">macOS</h2>
-        <h2 data-lang="pt_PT">macOS</h2>
-      </div>
-      <section class="gallery">
-        <article class="gallery-item" data-reveal>
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/mac/mac-channels-list-en.png" data-src-en="assets/screenshots/mac/mac-channels-list-en.png" data-src-pt="assets/screenshots/mac/mac-channels-list-pt.png" alt="macOS channel list view" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Channel list</h3>
-              <h3 data-lang="pt_PT">Lista de canais</h3>
+          <!-- macOS Section -->
+          <div style="margin-bottom: var(--space-4xl);">
+            <h3 style="font-size: 1.5rem; margin-bottom: var(--space-xl); color: var(--text-primary);" data-reveal>macOS</h3>
+            <div class="gallery-grid">
+              <article class="gallery-item" data-reveal>
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/mac/mac-channels-list-en.png" data-src-en="assets/screenshots/mac/mac-channels-list-en.png" data-src-pt="assets/screenshots/mac/mac-channels-list-pt.png" alt="macOS channel list view" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Channel List</h3>
+                  <h3 data-lang="pt_PT">Lista de Canais</h3>
+                  <p data-lang="en_US">Browse 50,000+ channels with smooth scrolling and instant search.</p>
+                  <p data-lang="pt_PT">Navegue em 50.000+ canais com scroll fluído e pesquisa instantânea.</p>
+                </div>
+              </article>
+              <article class="gallery-item" data-reveal data-reveal-delay="100">
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="macOS player view" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Player View</h3>
+                  <h3 data-lang="pt_PT">Vista do Player</h3>
+                  <p data-lang="en_US">Professional playback with multiple engine support.</p>
+                  <p data-lang="pt_PT">Reprodução profissional com suporte a múltiplos motores.</p>
+                </div>
+              </article>
+              <article class="gallery-item" data-reveal data-reveal-delay="200">
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/mac/multiview-en.png" data-src-en="assets/screenshots/mac/multiview-en.png" data-src-pt="assets/screenshots/mac/multiview-pt.png" alt="macOS multi-view layout" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Multi-View</h3>
+                  <h3 data-lang="pt_PT">Multi-View</h3>
+                  <p data-lang="en_US">Watch up to 9 streams simultaneously with custom layouts.</p>
+                  <p data-lang="pt_PT">Assista até 9 streams simultaneamente com layouts personalizados.</p>
+                </div>
+              </article>
             </div>
           </div>
-        </article>
-        <article class="gallery-item" data-reveal data-reveal-delay="60">
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="macOS player view" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Player view</h3>
-              <h3 data-lang="pt_PT">Vista do player</h3>
-            </div>
-          </div>
-        </article>
-        <article class="gallery-item" data-reveal data-reveal-delay="100">
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/mac/multiview-en.png" data-src-en="assets/screenshots/mac/multiview-en.png" data-src-pt="assets/screenshots/mac/multiview-pt.png" alt="macOS multi-view layout" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Multi-view</h3>
-              <h3 data-lang="pt_PT">Multi-view</h3>
-            </div>
-          </div>
-        </article>
-      </section>
 
-      <div class="section-head" data-reveal>
-        <h2 data-lang="en_US">iPhone</h2>
-        <h2 data-lang="pt_PT">iPhone</h2>
-      </div>
-      <section class="gallery">
-        <article class="gallery-item" data-reveal>
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/iphone/channels-list-en.png" data-src-en="assets/screenshots/iphone/channels-list-en.png" data-src-pt="assets/screenshots/iphone/channels-list-pt.png" alt="iPhone channel list" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Channel list</h3>
-              <h3 data-lang="pt_PT">Lista de canais</h3>
+          <!-- iPhone Section -->
+          <div style="margin-bottom: var(--space-4xl);">
+            <h3 style="font-size: 1.5rem; margin-bottom: var(--space-xl); color: var(--text-primary);" data-reveal>iPhone</h3>
+            <div class="gallery-grid">
+              <article class="gallery-item" data-reveal>
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/iphone/channels-list-en.png" data-src-en="assets/screenshots/iphone/channels-list-en.png" data-src-pt="assets/screenshots/iphone/channels-list-pt.png" alt="iPhone channel list" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Channel List</h3>
+                  <h3 data-lang="pt_PT">Lista de Canais</h3>
+                  <p data-lang="en_US">Touch-optimized browsing experience.</p>
+                  <p data-lang="pt_PT">Experiência de navegação otimizada para toque.</p>
+                </div>
+              </article>
+              <article class="gallery-item" data-reveal data-reveal-delay="100">
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/iphone/player-en.png" data-src-en="assets/screenshots/iphone/player-en.png" data-src-pt="assets/screenshots/iphone/player-pt.png" alt="iPhone player view" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Player View</h3>
+                  <h3 data-lang="pt_PT">Vista do Player</h3>
+                  <p data-lang="en_US">Full-featured player with gesture controls.</p>
+                  <p data-lang="pt_PT">Player completo com controlos por gestos.</p>
+                </div>
+              </article>
+              <article class="gallery-item" data-reveal data-reveal-delay="200">
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/iphone/settings-en.png" data-src-en="assets/screenshots/iphone/settings-en.png" data-src-pt="assets/screenshots/iphone/settings-pt.png" alt="iPhone settings view" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Settings</h3>
+                  <h3 data-lang="pt_PT">Definições</h3>
+                  <p data-lang="en_US">Comprehensive settings synced via iCloud.</p>
+                  <p data-lang="pt_PT">Definições completas sincronizadas via iCloud.</p>
+                </div>
+              </article>
             </div>
           </div>
-        </article>
-        <article class="gallery-item" data-reveal data-reveal-delay="60">
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/iphone/player-en.png" data-src-en="assets/screenshots/iphone/player-en.png" data-src-pt="assets/screenshots/iphone/player-pt.png" alt="iPhone player view" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Player view</h3>
-              <h3 data-lang="pt_PT">Vista do player</h3>
-            </div>
-          </div>
-        </article>
-        <article class="gallery-item" data-reveal data-reveal-delay="100">
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/iphone/settings-en.png" data-src-en="assets/screenshots/iphone/settings-en.png" data-src-pt="assets/screenshots/iphone/settings-pt.png" alt="iPhone settings view" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Settings</h3>
-              <h3 data-lang="pt_PT">Definições</h3>
-            </div>
-          </div>
-        </article>
-      </section>
 
-      <div class="section-head" data-reveal>
-        <h2 data-lang="en_US">iPad</h2>
-        <h2 data-lang="pt_PT">iPad</h2>
-      </div>
-      <section class="gallery">
-        <article class="gallery-item" data-reveal>
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/ipad/channels-list-en.png" data-src-en="assets/screenshots/ipad/channels-list-en.png" data-src-pt="assets/screenshots/ipad/channels-list-pt.png" alt="iPad channel list" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Channel list</h3>
-              <h3 data-lang="pt_PT">Lista de canais</h3>
+          <!-- iPad Section -->
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: var(--space-xl); color: var(--text-primary);" data-reveal>iPad</h3>
+            <div class="gallery-grid" style="grid-template-columns: repeat(2, 1fr);">
+              <article class="gallery-item" data-reveal>
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/ipad/channels-list-en.png" data-src-en="assets/screenshots/ipad/channels-list-en.png" data-src-pt="assets/screenshots/ipad/channels-list-pt.png" alt="iPad channel list" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Channel List</h3>
+                  <h3 data-lang="pt_PT">Lista de Canais</h3>
+                  <p data-lang="en_US">Big screen browsing with Split View support.</p>
+                  <p data-lang="pt_PT">Navegação em ecrã grande com suporte Split View.</p>
+                </div>
+              </article>
+              <article class="gallery-item" data-reveal data-reveal-delay="100">
+                <div class="gallery-item-image">
+                  <img src="assets/screenshots/ipad/player-en.png" data-src-en="assets/screenshots/ipad/player-en.png" data-src-pt="assets/screenshots/ipad/player-pt.png" alt="iPad player view" />
+                </div>
+                <div class="gallery-item-meta">
+                  <h3 data-lang="en_US">Player View</h3>
+                  <h3 data-lang="pt_PT">Vista do Player</h3>
+                  <p data-lang="en_US">Immersive playback on the big screen.</p>
+                  <p data-lang="pt_PT">Reprodução imersiva no ecrã grande.</p>
+                </div>
+              </article>
             </div>
           </div>
-        </article>
-        <article class="gallery-item" data-reveal data-reveal-delay="60">
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/ipad/player-en.png" data-src-en="assets/screenshots/ipad/player-en.png" data-src-pt="assets/screenshots/ipad/player-pt.png" alt="iPad player view" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Player view</h3>
-              <h3 data-lang="pt_PT">Vista do player</h3>
-            </div>
-          </div>
-        </article>
+        </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container"><p data-i18n="footerText"></p></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="public/logo.svg" alt="Djubi" />
+            <span data-i18n="brandName"></span>
+          </div>
+          <p class="footer-text" data-i18n="footerText"></p>
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+            <a href="https://github.com/Costa0910/djubi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>

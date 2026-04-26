@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web - Djubi Player</title>
     <meta name="description" content="Djubi Web is coming soon. The browser experience with the same performance standards as native apps." />
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg" aria-hidden="true">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+      <div class="gradient-orb gradient-orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
     <header class="floating-header">
-      <div class="nav-island shell">
-        <div class="core nav-core">
+      <div class="nav-island">
+        <div class="nav-core">
           <a class="brand" href="index.html">
             <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
-            <span><h1 data-i18n="brandName"></h1></span>
+            <h1 data-i18n="brandName"></h1>
           </a>
           <nav class="nav-links">
             <a href="index.html" data-i18n="navHome"></a>
@@ -23,7 +31,6 @@
             <a href="downloads.html" data-i18n="navDownloads"></a>
             <a class="active" href="web.html" data-i18n="navWeb"></a>
             <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
             <a href="support.html" data-i18n="navSupport"></a>
           </nav>
           <div class="header-actions">
@@ -34,59 +41,134 @@
       </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobileOverlay" class="mobile-overlay">
-      <div class="mobile-menu shell">
-        <div class="core">
-          <nav class="mobile-menu-links">
-            <a href="index.html" data-i18n="navHome"></a>
-            <a href="screenshots.html" data-i18n="navScreenshots"></a>
-            <a href="downloads.html" data-i18n="navDownloads"></a>
-            <a class="active" href="web.html" data-i18n="navWeb"></a>
-            <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
-            <a href="support.html" data-i18n="navSupport"></a>
-          </nav>
-        </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+          <a href="index.html" data-i18n="navHome"></a>
+          <a href="screenshots.html" data-i18n="navScreenshots"></a>
+          <a href="downloads.html" data-i18n="navDownloads"></a>
+          <a class="active" href="web.html" data-i18n="navWeb"></a>
+          <a href="faq.html" data-i18n="navFaq"></a>
+          <a href="privacy.html" data-i18n="navPrivacy"></a>
+          <a href="support.html" data-i18n="navSupport"></a>
+        </nav>
       </div>
     </div>
 
     <div class="top-spacer"></div>
 
-    <main class="container section">
-      <div class="page-grid">
-        <section class="list-shell" data-reveal>
-          <div class="list-core">
-            <span class="eyebrow" data-lang="en_US">Coming soon</span>
-            <span class="eyebrow" data-lang="pt_PT">Em breve</span>
-            <h2 data-lang="en_US">Djubi Web</h2>
-            <h2 data-lang="pt_PT">Djubi Web</h2>
-            <p data-lang="en_US">The browser experience is being engineered with the same performance and reliability standards as our native apps.</p>
-            <p data-lang="pt_PT">A experiência de browser está a ser desenvolvida com os mesmos padrões de performance e fiabilidade das apps nativas.</p>
-            <div class="coming">
-              <strong data-lang="en_US">In development</strong>
-              <strong data-lang="pt_PT">Em desenvolvimento</strong>
-              <p data-lang="en_US">Contact support to receive release announcements and early access details when available.</p>
-              <p data-lang="pt_PT">Contacte o suporte para receber anúncios de lançamento e detalhes de acesso antecipado quando disponíveis.</p>
-            </div>
-          </div>
-        </section>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="two-col">
+            <!-- Content -->
+            <div>
+              <div class="section-header" style="text-align: left; margin-bottom: var(--space-2xl);" data-reveal>
+                <span class="eyebrow" data-lang="en_US">Coming Soon</span>
+                <span class="eyebrow" data-lang="pt_PT">Em Breve</span>
+                <h2 data-lang="en_US">Djubi Web</h2>
+                <h2 data-lang="pt_PT">Djubi Web</h2>
+                <p data-lang="en_US">Experience Djubi in your browser with the same performance and reliability you expect from our native apps.</p>
+                <p data-lang="pt_PT">Experimente o Djubi no browser com a mesma performance e fiabilidade das nossas apps nativas.</p>
+              </div>
 
-        <section class="gallery-item" data-reveal data-reveal-delay="80">
-          <div class="gallery-item-core">
-            <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Djubi player interface preview" />
-            <div class="gallery-meta">
-              <h3 data-lang="en_US">Design reference</h3>
-              <h3 data-lang="pt_PT">Referência de design</h3>
-              <p data-lang="en_US">Visual baseline used to inform the forthcoming web experience.</p>
-              <p data-lang="pt_PT">Baseline visual usado como referência para a futura experiência web.</p>
+              <div class="feature-list" data-reveal data-reveal-delay="100">
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">No installation required</span>
+                  <span data-lang="pt_PT">Sem instalação necessária</span>
+                </div>
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">Cross-platform compatibility</span>
+                  <span data-lang="pt_PT">Compatibilidade multiplataforma</span>
+                </div>
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">Synced with native apps</span>
+                  <span data-lang="pt_PT">Sincronizado com apps nativas</span>
+                </div>
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">Same powerful features</span>
+                  <span data-lang="pt_PT">Mesmas funcionalidades poderosas</span>
+                </div>
+              </div>
+
+              <div class="coming-soon-box" style="margin-top: var(--space-2xl);" data-reveal data-reveal-delay="200">
+                <strong data-lang="en_US">Get Notified</strong>
+                <strong data-lang="pt_PT">Seja Notificado</strong>
+                <p data-lang="en_US">Contact <a href="mailto:support@djubi.app" style="color: var(--accent-bright);">support@djubi.app</a> to receive updates when the web version launches.</p>
+                <p data-lang="pt_PT">Contacte <a href="mailto:support@djubi.app" style="color: var(--accent-bright);">support@djubi.app</a> para receber atualizações quando a versão web for lançada.</p>
+              </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="gallery-item" data-reveal data-reveal-delay="150">
+              <div class="gallery-item-image">
+                <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Djubi player interface preview" />
+              </div>
+              <div class="gallery-item-meta">
+                <h3 data-lang="en_US">Design Preview</h3>
+                <h3 data-lang="pt_PT">Pré-visualização do Design</h3>
+                <p data-lang="en_US">The web experience will mirror our native interface design.</p>
+                <p data-lang="pt_PT">A experiência web irá espelhar o design da interface nativa.</p>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content" data-reveal>
+            <h2 data-lang="en_US">Cannot wait for the web version?</h2>
+            <h2 data-lang="pt_PT">Não pode esperar pela versão web?</h2>
+            <p data-lang="en_US">Download Djubi Player for macOS now and start streaming today.</p>
+            <p data-lang="pt_PT">Transfira o Djubi Player para macOS agora e comece a transmitir hoje.</p>
+            <div class="hero-actions">
+              <a class="btn accent" href="downloads.html">
+                <span data-i18n="ctaDownload"></span>
+                <span class="btn-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container"><p data-i18n="footerText"></p></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="public/logo.svg" alt="Djubi" />
+            <span data-i18n="brandName"></span>
+          </div>
+          <p class="footer-text" data-i18n="footerText"></p>
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+            <a href="https://github.com/Costa0910/djubi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>

@@ -3,21 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Djubi Player - Native IPTV for Apple</title>
-    <meta name="description" content="Professional IPTV player for macOS, iPhone, and iPad. Fast playlist ingestion, multi-engine playback, EPG timeline, and multi-view support." />
-    <meta name="theme-color" content="#fafafa" />
+    <title>Djubi Player - Lightning-Fast IPTV for Apple</title>
+    <meta name="description" content="Experience IPTV like never before. Djubi Player is the lightning-fast, native solution for your Mac, iPhone, and iPad. Handle 50,000+ channels with ease." />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="Djubi Player - Native IPTV for Apple" />
+    <meta property="og:description" content="Lightning-fast, native IPTV player for macOS, iPhone, and iPad. Built with Swift 6." />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg" aria-hidden="true">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+      <div class="gradient-orb gradient-orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
     <header class="floating-header">
-      <div class="nav-island shell">
-        <div class="core nav-core">
+      <div class="nav-island">
+        <div class="nav-core">
           <a class="brand" href="index.html">
             <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
-            <span>
-              <h1 data-i18n="brandName"></h1>
-            </span>
+            <h1 data-i18n="brandName"></h1>
           </a>
 
           <nav class="nav-links">
@@ -26,7 +35,6 @@
             <a href="downloads.html" data-i18n="navDownloads"></a>
             <a href="web.html" data-i18n="navWeb"></a>
             <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
             <a href="support.html" data-i18n="navSupport"></a>
           </nav>
 
@@ -43,145 +51,508 @@
       </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobileOverlay" class="mobile-overlay">
-      <div class="mobile-menu shell">
-        <div class="core">
-          <nav class="mobile-menu-links">
-            <a class="active" href="index.html" data-i18n="navHome"></a>
-            <a href="screenshots.html" data-i18n="navScreenshots"></a>
-            <a href="downloads.html" data-i18n="navDownloads"></a>
-            <a href="web.html" data-i18n="navWeb"></a>
-            <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
-            <a href="support.html" data-i18n="navSupport"></a>
-          </nav>
-        </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+          <a class="active" href="index.html" data-i18n="navHome"></a>
+          <a href="screenshots.html" data-i18n="navScreenshots"></a>
+          <a href="downloads.html" data-i18n="navDownloads"></a>
+          <a href="web.html" data-i18n="navWeb"></a>
+          <a href="faq.html" data-i18n="navFaq"></a>
+          <a href="privacy.html" data-i18n="navPrivacy"></a>
+          <a href="support.html" data-i18n="navSupport"></a>
+        </nav>
       </div>
     </div>
 
-    <div class="top-spacer"></div>
-
-    <main class="container">
+    <main>
+      <!-- Hero Section -->
       <section class="hero">
-        <div data-reveal>
-          <span class="eyebrow" data-lang="en_US">Apple-native IPTV</span>
-          <span class="eyebrow" data-lang="pt_PT">IPTV nativo Apple</span>
-
-          <h2 data-lang="en_US">Precision playback for serious IPTV users.</h2>
-          <h2 data-lang="pt_PT">Reprodução precisa para utilizadores IPTV exigentes.</h2>
-
+        <div class="hero-content" data-reveal>
+          <div class="hero-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+            <span data-lang="en_US">Built with Swift 6</span>
+            <span data-lang="pt_PT">Criado com Swift 6</span>
+          </div>
+          
+          <h2>
+            <span data-lang="en_US">IPTV that feels <span class="hero-highlight">native.</span></span>
+            <span data-lang="pt_PT">IPTV com experiência <span class="hero-highlight">nativa.</span></span>
+          </h2>
+          
           <p data-lang="en_US">
-            Fast playlist ingestion, stable multi-engine playback, EPG timeline control, and multi-view workflows. All in one focused product for macOS, iPhone, and iPad.
+            Lightning-fast playback with 120fps scrolling through 50,000+ channels. Multi-view, EPG, recording, and iCloud sync. The ultimate streaming experience for Apple users.
           </p>
           <p data-lang="pt_PT">
-            Ingestão rápida de playlists, reprodução estável com múltiplos motores, controlo de timeline EPG e workflows multi-view. Tudo numa experiência única para macOS, iPhone e iPad.
+            Reprodução ultra-rápida com scroll a 120fps em 50.000+ canais. Multi-view, EPG, gravação e sincronização iCloud. A experiência de streaming definitiva para utilizadores Apple.
           </p>
 
-          <div class="button-row">
-            <a class="btn primary" href="downloads.html" data-i18n="ctaDownload">
-              <span></span>
-              <span class="btn-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 8.5L8 13.5L13 8.5M8 13V2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <div class="hero-actions">
+            <a class="btn accent" href="downloads.html">
+              <span data-i18n="ctaDownload"></span>
+              <span class="btn-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
               </span>
             </a>
-            <a class="btn secondary" href="screenshots.html" data-i18n="ctaScreens">
-              <span></span>
-              <span class="btn-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <a class="btn secondary" href="screenshots.html">
+              <span data-i18n="ctaScreens"></span>
+              <span class="btn-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
                 </svg>
               </span>
             </a>
           </div>
         </div>
 
-        <div class="hero-panel" data-reveal data-reveal-delay="100">
-          <article class="panel-card wide">
-            <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Djubi Player on macOS showing the player interface" />
-          </article>
-          <article class="panel-card">
-            <img src="assets/screenshots/iphone/player-en.png" data-src-en="assets/screenshots/iphone/player-en.png" data-src-pt="assets/screenshots/iphone/player-pt.png" alt="Djubi Player on iPhone" />
-          </article>
-          <article class="panel-card">
-            <img src="assets/screenshots/ipad/player-en.png" data-src-en="assets/screenshots/ipad/player-en.png" data-src-pt="assets/screenshots/ipad/player-pt.png" alt="Djubi Player on iPad" />
-          </article>
+        <!-- Device Showcase -->
+        <div class="hero-showcase" data-reveal data-reveal-delay="200">
+          <div class="device-grid">
+            <div class="device-mac">
+              <div class="device-mac-topbar">
+                <div class="device-mac-dot red"></div>
+                <div class="device-mac-dot yellow"></div>
+                <div class="device-mac-dot green"></div>
+              </div>
+              <div class="device-mac-content">
+                <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Djubi Player on macOS" />
+              </div>
+            </div>
+            <div class="device-phones">
+              <div class="device-phone">
+                <div class="device-phone-notch"></div>
+                <div class="device-phone-content">
+                  <img src="assets/screenshots/iphone/player-en.png" data-src-en="assets/screenshots/iphone/player-en.png" data-src-pt="assets/screenshots/iphone/player-pt.png" alt="Djubi Player on iPhone" />
+                </div>
+              </div>
+              <div class="device-phone">
+                <div class="device-phone-notch"></div>
+                <div class="device-phone-content">
+                  <img src="assets/screenshots/ipad/player-en.png" data-src-en="assets/screenshots/ipad/player-en.png" data-src-pt="assets/screenshots/ipad/player-pt.png" alt="Djubi Player on iPad" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-head" data-reveal>
-          <span class="eyebrow" data-lang="en_US">System design</span>
-          <span class="eyebrow" data-lang="pt_PT">Arquitetura do sistema</span>
-          <h2 data-lang="en_US">Every interaction has operational intent.</h2>
-          <h2 data-lang="pt_PT">Cada interação tem intenção operacional.</h2>
-          <p data-lang="en_US">
-            The platform is structured around import speed, playback resilience, and clarity at high channel volume.
-          </p>
-          <p data-lang="pt_PT">
-            A plataforma está estruturada para velocidade de importação, robustez de reprodução e clareza em grandes volumes de canais.
-          </p>
+      <!-- Stats Bar -->
+      <section class="stats-bar">
+        <div class="container">
+          <div class="stats-grid" data-reveal>
+            <div class="stat-item">
+              <div class="stat-value">50K+</div>
+              <div class="stat-label" data-lang="en_US">Channels supported</div>
+              <div class="stat-label" data-lang="pt_PT">Canais suportados</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">120fps</div>
+              <div class="stat-label" data-lang="en_US">Smooth scrolling</div>
+              <div class="stat-label" data-lang="pt_PT">Scroll fluído</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">9</div>
+              <div class="stat-label" data-lang="en_US">Simultaneous streams</div>
+              <div class="stat-label" data-lang="pt_PT">Streams simultâneos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3</div>
+              <div class="stat-label" data-lang="en_US">Playback engines</div>
+              <div class="stat-label" data-lang="pt_PT">Motores de reprodução</div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="bento">
-          <div class="stack">
-            <article class="feature-shell" data-reveal>
-              <div class="feature-core">
-                <h3 data-lang="en_US">Import pipeline</h3>
-                <h3 data-lang="pt_PT">Pipeline de importação</h3>
-                <p data-lang="en_US">
-                  M3U, M3U8, and Xtream ingest with fast-first workflows designed for very large libraries.
-                </p>
-                <p data-lang="pt_PT">
-                  Ingestão M3U, M3U8 e Xtream com fluxos fast-first para bibliotecas muito extensas.
-                </p>
-                <div class="line-list">
-                  <div><span data-lang="en_US">Fast mode</span><span data-lang="pt_PT">Modo rápido</span><span>~30s</span></div>
-                  <div><span data-lang="en_US">Balanced mode</span><span data-lang="pt_PT">Modo equilibrado</span><span>~1-2 min</span></div>
-                  <div><span data-lang="en_US">Robust mode</span><span data-lang="pt_PT">Modo robusto</span><span>~5-6 min</span></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="feature-shell" data-reveal data-reveal-delay="80">
-              <div class="feature-core">
-                <h3 data-lang="en_US">Playback stack</h3>
-                <h3 data-lang="pt_PT">Stack de reprodução</h3>
-                <p data-lang="en_US">
-                  Multi-engine playback with subtitle and track control, fullscreen, PiP, and stream fallback paths.
-                </p>
-                <p data-lang="pt_PT">
-                  Reprodução multi-motor com controlo de legendas/faixas, fullscreen, PiP e fallback de streams.
-                </p>
-              </div>
-            </article>
+      <!-- Features Section -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow" data-lang="en_US">Key Features</span>
+            <span class="eyebrow" data-lang="pt_PT">Funcionalidades</span>
+            <h2 data-lang="en_US">Everything you need for professional IPTV</h2>
+            <h2 data-lang="pt_PT">Tudo o que precisa para IPTV profissional</h2>
+            <p data-lang="en_US">
+              Built from the ground up with Swift 6 and AppKit/SwiftUI for the most fluid experience on Apple platforms.
+            </p>
+            <p data-lang="pt_PT">
+              Construído de raiz com Swift 6 e AppKit/SwiftUI para a experiência mais fluída em plataformas Apple.
+            </p>
           </div>
 
-          <article class="feature-shell" data-reveal data-reveal-delay="120">
-            <div class="feature-core">
-              <h3 data-lang="en_US">Operations layer</h3>
-              <h3 data-lang="pt_PT">Camada operacional</h3>
+          <div class="features-grid">
+            <!-- Feature 1 -->
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <h3 data-lang="en_US">Extreme Performance</h3>
+              <h3 data-lang="pt_PT">Performance Extrema</h3>
+              <p data-lang="en_US">Browse 50,000+ channels with smooth 120fps scrolling and instant FTS5 search. No lag, ever.</p>
+              <p data-lang="pt_PT">Navegue em 50.000+ canais com scroll a 120fps e pesquisa FTS5 instantânea. Sem lag, sempre.</p>
+            </article>
+
+            <!-- Feature 2 -->
+            <article class="feature-card" data-reveal data-reveal-delay="100">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <h3 data-lang="en_US">Multi-View Mode</h3>
+              <h3 data-lang="pt_PT">Modo Multi-View</h3>
+              <p data-lang="en_US">Watch up to 9 channels simultaneously with customizable grid layouts. Never miss a moment.</p>
+              <p data-lang="pt_PT">Assista até 9 canais simultaneamente com layouts personalizáveis. Não perca nenhum momento.</p>
+            </article>
+
+            <!-- Feature 3 -->
+            <article class="feature-card" data-reveal data-reveal-delay="200">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <h3 data-lang="en_US">Full EPG Support</h3>
+              <h3 data-lang="pt_PT">EPG Completo</h3>
+              <p data-lang="en_US">Stay organized with automatic XMLTV mapping and a beautiful, interactive program guide.</p>
+              <p data-lang="pt_PT">Mantenha-se organizado com mapeamento XMLTV automático e um guia de programas interativo.</p>
+            </article>
+
+            <!-- Feature 4 -->
+            <article class="feature-card" data-reveal>
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/>
+                  <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/>
+                  <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/>
+                  <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/>
+                </svg>
+              </div>
+              <h3 data-lang="en_US">PVR Recording</h3>
+              <h3 data-lang="pt_PT">Gravação PVR</h3>
+              <p data-lang="en_US">Schedule and record live streams directly to your local storage with built-in conflict detection.</p>
+              <p data-lang="pt_PT">Agende e grave streams diretamente para armazenamento local com deteção de conflitos.</p>
+            </article>
+
+            <!-- Feature 5 -->
+            <article class="feature-card" data-reveal data-reveal-delay="100">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                </svg>
+              </div>
+              <h3 data-lang="en_US">iCloud Sync</h3>
+              <h3 data-lang="pt_PT">Sincronização iCloud</h3>
+              <p data-lang="en_US">Your favorites and watch history stay perfectly in sync across your Mac, iPhone, and iPad.</p>
+              <p data-lang="pt_PT">Os seus favoritos e histórico sincronizados perfeitamente entre Mac, iPhone e iPad.</p>
+            </article>
+
+            <!-- Feature 6 -->
+            <article class="feature-card" data-reveal data-reveal-delay="200">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+              <h3 data-lang="en_US">Privacy & Security</h3>
+              <h3 data-lang="pt_PT">Privacidade e Segurança</h3>
+              <p data-lang="en_US">Protect your viewing with secure Parental Controls using FaceID, TouchID, or a custom PIN.</p>
+              <p data-lang="pt_PT">Proteja a sua visualização com Controlos Parentais seguros via FaceID, TouchID ou PIN.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Multi-View Feature -->
+      <section class="section">
+        <div class="container">
+          <div class="feature-large" data-reveal>
+            <div class="feature-large-content">
+              <span class="eyebrow" data-lang="en_US">Multi-View</span>
+              <span class="eyebrow" data-lang="pt_PT">Multi-View</span>
+              <h3 data-lang="en_US">Watch everything at once</h3>
+              <h3 data-lang="pt_PT">Assista a tudo de uma vez</h3>
               <p data-lang="en_US">
-                EPG timeline mapping, scheduled recordings, conflict detection, and multi-view slots are integrated without interface fragmentation.
+                Perfect for sports fans who want to watch multiple games simultaneously. Customize your grid layout from 2 to 9 streams and switch focus instantly.
               </p>
               <p data-lang="pt_PT">
-                Mapeamento EPG por timeline, gravações agendadas, deteção de conflitos e slots multi-view integrados sem fragmentação da interface.
+                Perfeito para fãs de desporto que querem assistir a múltiplos jogos simultaneamente. Personalize o layout de 2 a 9 streams e mude o foco instantaneamente.
               </p>
-              <div class="line-list">
-                <div><span>EPG XMLTV</span><span data-lang="en_US">Timeline guide</span><span data-lang="pt_PT">Guia em timeline</span></div>
-                <div><span data-lang="en_US">Recordings</span><span data-lang="pt_PT">Gravações</span><span data-lang="en_US">Scheduled + limits</span><span data-lang="pt_PT">Agendado + limites</span></div>
-                <div><span>Multi-view</span><span data-lang="en_US">Up to 9 streams</span><span data-lang="pt_PT">Até 9 streams</span></div>
+              <div class="feature-list">
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">Up to 9 simultaneous streams</span>
+                  <span data-lang="pt_PT">Até 9 streams simultâneos</span>
+                </div>
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">Customizable grid layouts</span>
+                  <span data-lang="pt_PT">Layouts de grid personalizáveis</span>
+                </div>
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">One-click focus switching</span>
+                  <span data-lang="pt_PT">Troca de foco com um clique</span>
+                </div>
               </div>
             </div>
-          </article>
+            <div class="feature-large-visual">
+              <div class="multiview-demo">
+                <div class="multiview-grid">
+                  <div class="multiview-cell active">
+                    <span>CH 1</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 2</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 3</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 4</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 5</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 6</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 7</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 8</span>
+                  </div>
+                  <div class="multiview-cell">
+                    <span>CH 9</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playback Engines -->
+      <section class="section">
+        <div class="container">
+          <div class="feature-large reverse" data-reveal>
+            <div class="feature-large-content">
+              <span class="eyebrow" data-lang="en_US">Playback</span>
+              <span class="eyebrow" data-lang="pt_PT">Reprodução</span>
+              <h3 data-lang="en_US">Professional-grade engines</h3>
+              <h3 data-lang="pt_PT">Motores de nível profissional</h3>
+              <p data-lang="en_US">
+                Toggle between VLCKit, AVPlayer, and libmpv engines for maximum compatibility with any stream format. Automatic fallback ensures uninterrupted viewing.
+              </p>
+              <p data-lang="pt_PT">
+                Alterne entre motores VLCKit, AVPlayer e libmpv para máxima compatibilidade com qualquer formato de stream. Fallback automático garante visualização ininterrupta.
+              </p>
+              <div class="feature-list">
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">VLCKit for broad format support</span>
+                  <span data-lang="pt_PT">VLCKit para amplo suporte de formatos</span>
+                </div>
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">AVPlayer for native Apple integration</span>
+                  <span data-lang="pt_PT">AVPlayer para integração nativa Apple</span>
+                </div>
+                <div class="feature-list-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span data-lang="en_US">libmpv for advanced control</span>
+                  <span data-lang="pt_PT">libmpv para controlo avançado</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-large-visual">
+              <img src="assets/screenshots/mac/multiview-en.png" data-src-en="assets/screenshots/mac/multiview-en.png" data-src-pt="assets/screenshots/mac/multiview-pt.png" alt="Multi-view interface" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Apple Native Features -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow" data-lang="en_US">Apple Native</span>
+            <span class="eyebrow" data-lang="pt_PT">Nativo Apple</span>
+            <h2 data-lang="en_US">First-class citizen on Apple platforms</h2>
+            <h2 data-lang="pt_PT">Cidadão de primeira classe em plataformas Apple</h2>
+            <p data-lang="en_US">
+              Djubi is not a port. It is built exclusively for macOS and iOS with native features you expect.
+            </p>
+            <p data-lang="pt_PT">
+              Djubi não é uma conversão. É construído exclusivamente para macOS e iOS com funcionalidades nativas que espera.
+            </p>
+          </div>
+
+          <div class="bento-grid">
+            <article class="bento-item span-4" data-reveal>
+              <h3 data-lang="en_US">Picture-in-Picture</h3>
+              <h3 data-lang="pt_PT">Picture-in-Picture</h3>
+              <p data-lang="en_US">Keep watching while you work. Native PiP support on all devices.</p>
+              <p data-lang="pt_PT">Continue a assistir enquanto trabalha. Suporte PiP nativo em todos os dispositivos.</p>
+            </article>
+            <article class="bento-item span-4" data-reveal data-reveal-delay="100">
+              <h3 data-lang="en_US">Siri Shortcuts</h3>
+              <h3 data-lang="pt_PT">Atalhos Siri</h3>
+              <p data-lang="en_US">Voice control your viewing experience with custom Siri commands.</p>
+              <p data-lang="pt_PT">Controle por voz a sua experiência de visualização com comandos Siri personalizados.</p>
+            </article>
+            <article class="bento-item span-4" data-reveal data-reveal-delay="200">
+              <h3 data-lang="en_US">Spotlight Search</h3>
+              <h3 data-lang="pt_PT">Pesquisa Spotlight</h3>
+              <p data-lang="en_US">Find and launch channels directly from Spotlight on your Mac.</p>
+              <p data-lang="pt_PT">Encontre e inicie canais diretamente do Spotlight no seu Mac.</p>
+            </article>
+            <article class="bento-item span-6" data-reveal>
+              <h3 data-lang="en_US">Keyboard Shortcuts</h3>
+              <h3 data-lang="pt_PT">Atalhos de Teclado</h3>
+              <p data-lang="en_US">Fully customizable keyboard shortcuts for power users. Control everything without touching your mouse.</p>
+              <p data-lang="pt_PT">Atalhos de teclado totalmente personalizáveis para utilizadores avançados. Controle tudo sem tocar no rato.</p>
+            </article>
+            <article class="bento-item span-6" data-reveal data-reveal-delay="100">
+              <h3 data-lang="en_US">Services Menu</h3>
+              <h3 data-lang="pt_PT">Menu Serviços</h3>
+              <p data-lang="en_US">Right-click any URL and select &quot;Play URL in Djubi&quot; from the Services menu. Instant playback.</p>
+              <p data-lang="pt_PT">Clique direito em qualquer URL e selecione &quot;Reproduzir URL no Djubi&quot; do menu Serviços. Reprodução instantânea.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Platforms Section -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow" data-lang="en_US">Platforms</span>
+            <span class="eyebrow" data-lang="pt_PT">Plataformas</span>
+            <h2 data-lang="en_US">Available on all your Apple devices</h2>
+            <h2 data-lang="pt_PT">Disponível em todos os seus dispositivos Apple</h2>
+          </div>
+
+          <div class="platform-grid">
+            <article class="platform-card" data-reveal>
+              <div class="platform-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8"/>
+                  <path d="M12 17v4"/>
+                </svg>
+              </div>
+              <h3>macOS</h3>
+              <p data-lang="en_US">Universal build for Apple Silicon and Intel. Requires macOS 14+.</p>
+              <p data-lang="pt_PT">Build universal para Apple Silicon e Intel. Requer macOS 14+.</p>
+              <span class="platform-badge available" data-lang="en_US">Available now</span>
+              <span class="platform-badge available" data-lang="pt_PT">Disponível agora</span>
+            </article>
+            <article class="platform-card" data-reveal data-reveal-delay="100">
+              <div class="platform-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2"/>
+                  <path d="M12 18h.01"/>
+                </svg>
+              </div>
+              <h3>iPhone</h3>
+              <p data-lang="en_US">Touch-optimized interface with all the power of the desktop version.</p>
+              <p data-lang="pt_PT">Interface otimizada para toque com todo o poder da versão desktop.</p>
+              <span class="platform-badge coming" data-lang="en_US">Coming soon</span>
+              <span class="platform-badge coming" data-lang="pt_PT">Em breve</span>
+            </article>
+            <article class="platform-card" data-reveal data-reveal-delay="200">
+              <div class="platform-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2"/>
+                  <path d="M12 18h.01"/>
+                </svg>
+              </div>
+              <h3>iPad</h3>
+              <p data-lang="en_US">Big screen experience with multi-view and Split View support.</p>
+              <p data-lang="pt_PT">Experiência em ecrã grande com suporte multi-view e Split View.</p>
+              <span class="platform-badge coming" data-lang="en_US">Coming soon</span>
+              <span class="platform-badge coming" data-lang="pt_PT">Em breve</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content" data-reveal>
+            <h2 data-lang="en_US">Ready to elevate your streaming?</h2>
+            <h2 data-lang="pt_PT">Pronto para elevar o seu streaming?</h2>
+            <p data-lang="en_US">
+              Download Djubi Player now and experience IPTV the way it should be. Fast, beautiful, and native.
+            </p>
+            <p data-lang="pt_PT">
+              Transfira o Djubi Player agora e experimente IPTV como deve ser. Rápido, bonito e nativo.
+            </p>
+            <div class="hero-actions">
+              <a class="btn accent" href="downloads.html">
+                <span data-i18n="ctaDownload"></span>
+                <span class="btn-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
-        <p data-i18n="footerText"></p>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="public/logo.svg" alt="Djubi" />
+            <span data-i18n="brandName"></span>
+          </div>
+          <p class="footer-text" data-i18n="footerText"></p>
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+            <a href="https://github.com/Costa0910/djubi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
       </div>
     </footer>
 

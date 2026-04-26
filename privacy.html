@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy - Djubi Player</title>
     <meta name="description" content="Privacy policy and data commitments for Djubi Player users." />
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg" aria-hidden="true">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
     <header class="floating-header">
-      <div class="nav-island shell">
-        <div class="core nav-core">
+      <div class="nav-island">
+        <div class="nav-core">
           <a class="brand" href="index.html">
             <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
-            <span><h1 data-i18n="brandName"></h1></span>
+            <h1 data-i18n="brandName"></h1>
           </a>
           <nav class="nav-links">
             <a href="index.html" data-i18n="navHome"></a>
@@ -23,7 +30,6 @@
             <a href="downloads.html" data-i18n="navDownloads"></a>
             <a href="web.html" data-i18n="navWeb"></a>
             <a href="faq.html" data-i18n="navFaq"></a>
-            <a class="active" href="privacy.html" data-i18n="navPrivacy"></a>
             <a href="support.html" data-i18n="navSupport"></a>
           </nav>
           <div class="header-actions">
@@ -34,69 +40,106 @@
       </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobileOverlay" class="mobile-overlay">
-      <div class="mobile-menu shell">
-        <div class="core">
-          <nav class="mobile-menu-links">
-            <a href="index.html" data-i18n="navHome"></a>
-            <a href="screenshots.html" data-i18n="navScreenshots"></a>
-            <a href="downloads.html" data-i18n="navDownloads"></a>
-            <a href="web.html" data-i18n="navWeb"></a>
-            <a href="faq.html" data-i18n="navFaq"></a>
-            <a class="active" href="privacy.html" data-i18n="navPrivacy"></a>
-            <a href="support.html" data-i18n="navSupport"></a>
-          </nav>
-        </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+          <a href="index.html" data-i18n="navHome"></a>
+          <a href="screenshots.html" data-i18n="navScreenshots"></a>
+          <a href="downloads.html" data-i18n="navDownloads"></a>
+          <a href="web.html" data-i18n="navWeb"></a>
+          <a href="faq.html" data-i18n="navFaq"></a>
+          <a class="active" href="privacy.html" data-i18n="navPrivacy"></a>
+          <a href="support.html" data-i18n="navSupport"></a>
+        </nav>
       </div>
     </div>
 
     <div class="top-spacer"></div>
 
-    <main class="container section">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow" data-lang="en_US">Privacy</span>
-        <span class="eyebrow" data-lang="pt_PT">Privacidade</span>
-        <h2 data-lang="en_US">Your data, your control</h2>
-        <h2 data-lang="pt_PT">Os seus dados, o seu controlo</h2>
-        <p data-lang="en_US">Our commitments to privacy and transparency for Djubi users.</p>
-        <p data-lang="pt_PT">Os nossos compromissos de privacidade e transparência para utilizadores Djubi.</p>
-      </div>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow" data-lang="en_US">Privacy</span>
+            <span class="eyebrow" data-lang="pt_PT">Privacidade</span>
+            <h2 data-lang="en_US">Your data, your control</h2>
+            <h2 data-lang="pt_PT">Os seus dados, o seu controlo</h2>
+            <p data-lang="en_US">Our commitments to privacy and transparency for Djubi users.</p>
+            <p data-lang="pt_PT">Os nossos compromissos de privacidade e transparência para utilizadores Djubi.</p>
+          </div>
 
-      <section class="list-shell" data-reveal>
-        <div class="list-core">
-          <article class="list-item">
-            <h3 data-lang="en_US">Local data usage</h3>
-            <h3 data-lang="pt_PT">Uso de dados local</h3>
-            <p data-lang="en_US">Playlist data and playback preferences are stored on your device to deliver core functionality. We do not collect or transmit this data.</p>
-            <p data-lang="pt_PT">Dados de playlists e preferências de reprodução são guardados no dispositivo para fornecer funcionalidade principal. Não recolhemos nem transmitimos estes dados.</p>
-          </article>
+          <div class="list-card" data-reveal>
+            <div class="list-card-header">
+              <h2 data-lang="en_US">Privacy Policy</h2>
+              <h2 data-lang="pt_PT">Política de Privacidade</h2>
+              <p data-lang="en_US">Last updated: 2024</p>
+              <p data-lang="pt_PT">Última atualização: 2024</p>
+            </div>
+            <div class="list-card-body">
+              <div class="list-item">
+                <h3 data-lang="en_US">Local Data Storage</h3>
+                <h3 data-lang="pt_PT">Armazenamento Local</h3>
+                <p data-lang="en_US">Playlist data, playback preferences, and application settings are stored locally on your device. This data is essential for delivering core functionality. We do not collect, transmit, or share this information with anyone.</p>
+                <p data-lang="pt_PT">Dados de playlists, preferências de reprodução e definições da aplicação são guardados localmente no seu dispositivo. Estes dados são essenciais para a funcionalidade principal. Não recolhemos, transmitimos ou partilhamos esta informação.</p>
+              </div>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">Credentials and sources</h3>
-            <h3 data-lang="pt_PT">Credenciais e fontes</h3>
-            <p data-lang="en_US">You remain responsible for IPTV credentials and source integrity from your provider. Djubi does not validate or store provider credentials on our servers.</p>
-            <p data-lang="pt_PT">O utilizador mantém responsabilidade pelas credenciais IPTV e integridade da origem do fornecedor. O Djubi não valida nem guarda credenciais de fornecedores nos nossos servidores.</p>
-          </article>
+              <div class="list-item">
+                <h3 data-lang="en_US">Credentials & Sources</h3>
+                <h3 data-lang="pt_PT">Credenciais e Fontes</h3>
+                <p data-lang="en_US">You are responsible for the IPTV credentials and content sources you add to Djubi. We do not validate, store, or process provider credentials on our servers. All authentication happens directly between your device and your IPTV provider.</p>
+                <p data-lang="pt_PT">É responsável pelas credenciais IPTV e fontes de conteúdo que adiciona ao Djubi. Não validamos, guardamos ou processamos credenciais nos nossos servidores. Toda a autenticação acontece diretamente entre o seu dispositivo e o seu fornecedor IPTV.</p>
+              </div>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">Cloud synchronization</h3>
-            <h3 data-lang="pt_PT">Sincronização cloud</h3>
-            <p data-lang="en_US">When enabled, selected settings can sync through Apple account services. Djubi does not sell personal data to third parties.</p>
-            <p data-lang="pt_PT">Quando ativa, algumas definições podem sincronizar através dos serviços da conta Apple. O Djubi não vende dados pessoais a terceiros.</p>
-          </article>
+              <div class="list-item">
+                <h3 data-lang="en_US">iCloud Synchronization</h3>
+                <h3 data-lang="pt_PT">Sincronização iCloud</h3>
+                <p data-lang="en_US">When enabled, favorites, watch history, and certain settings sync through Apple&apos;s iCloud service. This data is encrypted and protected by Apple&apos;s security measures. We have no access to data stored in your iCloud account.</p>
+                <p data-lang="pt_PT">Quando ativa, favoritos, histórico e certas definições sincronizam através do iCloud da Apple. Estes dados são encriptados e protegidos pelas medidas de segurança da Apple. Não temos acesso a dados guardados na sua conta iCloud.</p>
+              </div>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">Contact</h3>
-            <h3 data-lang="pt_PT">Contacto</h3>
-            <p data-lang="en_US">For legal or account-specific requests, contact <a href="mailto:support@djubi.app">support@djubi.app</a>.</p>
-            <p data-lang="pt_PT">Para pedidos legais ou específicos de conta, contacte <a href="mailto:support@djubi.app">support@djubi.app</a>.</p>
-          </article>
+              <div class="list-item">
+                <h3 data-lang="en_US">No Analytics or Tracking</h3>
+                <h3 data-lang="pt_PT">Sem Analytics ou Tracking</h3>
+                <p data-lang="en_US">Djubi does not include any third-party analytics, tracking SDKs, or advertising frameworks. We do not collect usage statistics, viewing habits, or any behavioral data.</p>
+                <p data-lang="pt_PT">Djubi não inclui analytics de terceiros, SDKs de tracking ou frameworks de publicidade. Não recolhemos estatísticas de uso, hábitos de visualização ou dados comportamentais.</p>
+              </div>
+
+              <div class="list-item">
+                <h3 data-lang="en_US">Third-Party Services</h3>
+                <h3 data-lang="pt_PT">Serviços de Terceiros</h3>
+                <p data-lang="en_US">Djubi connects only to the IPTV providers you configure. We do not share your data with any third parties. We do not sell personal data to anyone, ever.</p>
+                <p data-lang="pt_PT">Djubi conecta-se apenas aos fornecedores IPTV que configura. Não partilhamos os seus dados com terceiros. Não vendemos dados pessoais a ninguém, nunca.</p>
+              </div>
+
+              <div class="list-item">
+                <h3 data-lang="en_US">Contact</h3>
+                <h3 data-lang="pt_PT">Contacto</h3>
+                <p data-lang="en_US">For privacy-related questions or data requests, please contact us at <a href="mailto:support@djubi.app">support@djubi.app</a>.</p>
+                <p data-lang="pt_PT">Para questões relacionadas com privacidade ou pedidos de dados, contacte-nos em <a href="mailto:support@djubi.app">support@djubi.app</a>.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container"><p data-i18n="footerText"></p></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="public/logo.svg" alt="Djubi" />
+            <span data-i18n="brandName"></span>
+          </div>
+          <p class="footer-text" data-i18n="footerText"></p>
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+            <a href="https://github.com/Costa0910/djubi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>

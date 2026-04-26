@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ - Djubi Player</title>
     <meta name="description" content="Frequently asked questions about Djubi Player. Learn about supported formats, features, and capabilities." />
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg" aria-hidden="true">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
     <header class="floating-header">
-      <div class="nav-island shell">
-        <div class="core nav-core">
+      <div class="nav-island">
+        <div class="nav-core">
           <a class="brand" href="index.html">
             <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
-            <span><h1 data-i18n="brandName"></h1></span>
+            <h1 data-i18n="brandName"></h1>
           </a>
           <nav class="nav-links">
             <a href="index.html" data-i18n="navHome"></a>
@@ -23,7 +30,6 @@
             <a href="downloads.html" data-i18n="navDownloads"></a>
             <a href="web.html" data-i18n="navWeb"></a>
             <a class="active" href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
             <a href="support.html" data-i18n="navSupport"></a>
           </nav>
           <div class="header-actions">
@@ -34,68 +40,111 @@
       </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobileOverlay" class="mobile-overlay">
-      <div class="mobile-menu shell">
-        <div class="core">
-          <nav class="mobile-menu-links">
-            <a href="index.html" data-i18n="navHome"></a>
-            <a href="screenshots.html" data-i18n="navScreenshots"></a>
-            <a href="downloads.html" data-i18n="navDownloads"></a>
-            <a href="web.html" data-i18n="navWeb"></a>
-            <a class="active" href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
-            <a href="support.html" data-i18n="navSupport"></a>
-          </nav>
-        </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+          <a href="index.html" data-i18n="navHome"></a>
+          <a href="screenshots.html" data-i18n="navScreenshots"></a>
+          <a href="downloads.html" data-i18n="navDownloads"></a>
+          <a href="web.html" data-i18n="navWeb"></a>
+          <a class="active" href="faq.html" data-i18n="navFaq"></a>
+          <a href="privacy.html" data-i18n="navPrivacy"></a>
+          <a href="support.html" data-i18n="navSupport"></a>
+        </nav>
       </div>
     </div>
 
     <div class="top-spacer"></div>
 
-    <main class="container section">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">FAQ</span>
-        <h2 data-lang="en_US">Questions and answers</h2>
-        <h2 data-lang="pt_PT">Perguntas e respostas</h2>
-        <p data-lang="en_US">Quick answers for new users getting started with Djubi Player.</p>
-        <p data-lang="pt_PT">Respostas rápidas para novos utilizadores do Djubi Player.</p>
-      </div>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow">FAQ</span>
+            <h2 data-lang="en_US">Frequently Asked Questions</h2>
+            <h2 data-lang="pt_PT">Perguntas Frequentes</h2>
+            <p data-lang="en_US">Everything you need to know to get started with Djubi Player.</p>
+            <p data-lang="pt_PT">Tudo o que precisa saber para começar com o Djubi Player.</p>
+          </div>
 
-      <section class="list-shell" data-reveal>
-        <div class="list-core">
-          <article class="list-item">
-            <h3 data-lang="en_US">Which source formats does Djubi accept?</h3>
-            <h3 data-lang="pt_PT">Que formatos de origem o Djubi aceita?</h3>
-            <p data-lang="en_US">M3U, M3U8, and Xtream credentials are supported in the current platform.</p>
-            <p data-lang="pt_PT">M3U, M3U8 e credenciais Xtream são suportados na plataforma atual.</p>
-          </article>
+          <div class="faq-grid">
+            <article class="faq-item" data-reveal>
+              <h3 data-lang="en_US">What playlist formats are supported?</h3>
+              <h3 data-lang="pt_PT">Que formatos de playlist são suportados?</h3>
+              <p data-lang="en_US">Djubi supports M3U, M3U8, and Xtream Codes API credentials. You can import playlists from local files or remote URLs.</p>
+              <p data-lang="pt_PT">Djubi suporta M3U, M3U8 e credenciais Xtream Codes API. Pode importar playlists de ficheiros locais ou URLs remotos.</p>
+            </article>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">Does it include EPG and scheduled recordings?</h3>
-            <h3 data-lang="pt_PT">Inclui EPG e gravações agendadas?</h3>
-            <p data-lang="en_US">Yes. XMLTV mapping, timeline guide, and recording scheduling are included.</p>
-            <p data-lang="pt_PT">Sim. Mapeamento XMLTV, guia em timeline e agendamento de gravações estão incluídos.</p>
-          </article>
+            <article class="faq-item" data-reveal data-reveal-delay="100">
+              <h3 data-lang="en_US">How many channels can Djubi handle?</h3>
+              <h3 data-lang="pt_PT">Quantos canais o Djubi suporta?</h3>
+              <p data-lang="en_US">Djubi is optimized for massive playlists. We have tested with over 50,000 channels while maintaining 120fps scrolling performance.</p>
+              <p data-lang="pt_PT">Djubi está otimizado para playlists massivas. Testámos com mais de 50.000 canais mantendo performance de scroll a 120fps.</p>
+            </article>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">Can I watch multiple channels at the same time?</h3>
-            <h3 data-lang="pt_PT">Posso ver múltiplos canais ao mesmo tempo?</h3>
-            <p data-lang="en_US">Yes. Multi-view layouts support up to 9 simultaneous streams on supported hardware.</p>
-            <p data-lang="pt_PT">Sim. Os layouts multi-view suportam até 9 streams simultâneos em hardware compatível.</p>
-          </article>
+            <article class="faq-item" data-reveal>
+              <h3 data-lang="en_US">Does Djubi include EPG support?</h3>
+              <h3 data-lang="pt_PT">Djubi inclui suporte EPG?</h3>
+              <p data-lang="en_US">Yes. Djubi features full XMLTV EPG support with automatic channel mapping, an interactive timeline guide, and program search.</p>
+              <p data-lang="pt_PT">Sim. Djubi inclui suporte XMLTV EPG completo com mapeamento automático de canais, guia timeline interativo e pesquisa de programas.</p>
+            </article>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">Is there a web version?</h3>
-            <h3 data-lang="pt_PT">Existe versão web?</h3>
-            <p data-lang="en_US">The web version is in active development and will be available soon.</p>
-            <p data-lang="pt_PT">A versão web está em desenvolvimento ativo e estará disponível em breve.</p>
-          </article>
+            <article class="faq-item" data-reveal data-reveal-delay="100">
+              <h3 data-lang="en_US">Can I record live streams?</h3>
+              <h3 data-lang="pt_PT">Posso gravar streams em direto?</h3>
+              <p data-lang="en_US">Yes. The PVR feature allows scheduled recordings with conflict detection. Recordings are saved directly to your local storage.</p>
+              <p data-lang="pt_PT">Sim. A funcionalidade PVR permite gravações agendadas com deteção de conflitos. Gravações são guardadas diretamente no armazenamento local.</p>
+            </article>
+
+            <article class="faq-item" data-reveal>
+              <h3 data-lang="en_US">What playback engines are available?</h3>
+              <h3 data-lang="pt_PT">Que motores de reprodução estão disponíveis?</h3>
+              <p data-lang="en_US">Toggle between VLCKit, AVPlayer, and libmpv for maximum format compatibility. Automatic fallback ensures uninterrupted playback.</p>
+              <p data-lang="pt_PT">Alterne entre VLCKit, AVPlayer e libmpv para máxima compatibilidade de formatos. Fallback automático garante reprodução ininterrupta.</p>
+            </article>
+
+            <article class="faq-item" data-reveal data-reveal-delay="100">
+              <h3 data-lang="en_US">Is there iCloud synchronization?</h3>
+              <h3 data-lang="pt_PT">Existe sincronização iCloud?</h3>
+              <p data-lang="en_US">Yes. Your favorites, watch history, and settings sync seamlessly across all your Apple devices via iCloud.</p>
+              <p data-lang="pt_PT">Sim. Os seus favoritos, histórico e definições sincronizam perfeitamente entre todos os seus dispositivos Apple via iCloud.</p>
+            </article>
+
+            <article class="faq-item" data-reveal>
+              <h3 data-lang="en_US">Does Djubi provide IPTV content?</h3>
+              <h3 data-lang="pt_PT">O Djubi fornece conteúdo IPTV?</h3>
+              <p data-lang="en_US">No. Djubi is a player application only. You must provide your own M3U playlist or Xtream Codes credentials from your IPTV provider.</p>
+              <p data-lang="pt_PT">Não. Djubi é apenas uma aplicação de reprodução. Deve fornecer a sua própria playlist M3U ou credenciais Xtream do seu fornecedor IPTV.</p>
+            </article>
+
+            <article class="faq-item" data-reveal data-reveal-delay="100">
+              <h3 data-lang="en_US">Is there a web version?</h3>
+              <h3 data-lang="pt_PT">Existe versão web?</h3>
+              <p data-lang="en_US">The web version is currently in development. It will deliver the same performance and reliability standards as our native apps.</p>
+              <p data-lang="pt_PT">A versão web está em desenvolvimento. Irá oferecer os mesmos padrões de performance e fiabilidade das apps nativas.</p>
+            </article>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container"><p data-i18n="footerText"></p></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="public/logo.svg" alt="Djubi" />
+            <span data-i18n="brandName"></span>
+          </div>
+          <p class="footer-text" data-i18n="footerText"></p>
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+            <a href="https://github.com/Costa0910/djubi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>

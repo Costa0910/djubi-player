@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Support - Djubi Player</title>
     <meta name="description" content="Get help with Djubi Player. Contact support via email or GitHub for technical assistance." />
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg" aria-hidden="true">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
     <header class="floating-header">
-      <div class="nav-island shell">
-        <div class="core nav-core">
+      <div class="nav-island">
+        <div class="nav-core">
           <a class="brand" href="index.html">
             <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
-            <span><h1 data-i18n="brandName"></h1></span>
+            <h1 data-i18n="brandName"></h1>
           </a>
           <nav class="nav-links">
             <a href="index.html" data-i18n="navHome"></a>
@@ -23,7 +30,6 @@
             <a href="downloads.html" data-i18n="navDownloads"></a>
             <a href="web.html" data-i18n="navWeb"></a>
             <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
             <a class="active" href="support.html" data-i18n="navSupport"></a>
           </nav>
           <div class="header-actions">
@@ -34,64 +40,127 @@
       </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobileOverlay" class="mobile-overlay">
-      <div class="mobile-menu shell">
-        <div class="core">
-          <nav class="mobile-menu-links">
-            <a href="index.html" data-i18n="navHome"></a>
-            <a href="screenshots.html" data-i18n="navScreenshots"></a>
-            <a href="downloads.html" data-i18n="navDownloads"></a>
-            <a href="web.html" data-i18n="navWeb"></a>
-            <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
-            <a class="active" href="support.html" data-i18n="navSupport"></a>
-          </nav>
-        </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+          <a href="index.html" data-i18n="navHome"></a>
+          <a href="screenshots.html" data-i18n="navScreenshots"></a>
+          <a href="downloads.html" data-i18n="navDownloads"></a>
+          <a href="web.html" data-i18n="navWeb"></a>
+          <a href="faq.html" data-i18n="navFaq"></a>
+          <a href="privacy.html" data-i18n="navPrivacy"></a>
+          <a class="active" href="support.html" data-i18n="navSupport"></a>
+        </nav>
       </div>
     </div>
 
     <div class="top-spacer"></div>
 
-    <main class="container section">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow" data-lang="en_US">Support</span>
-        <span class="eyebrow" data-lang="pt_PT">Suporte</span>
-        <h2 data-lang="en_US">Get help with Djubi</h2>
-        <h2 data-lang="pt_PT">Obtenha ajuda com o Djubi</h2>
-        <p data-lang="en_US">We are here to help you with technical questions and account requests.</p>
-        <p data-lang="pt_PT">Estamos aqui para ajudar com questões técnicas e pedidos de conta.</p>
-      </div>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow" data-lang="en_US">Support</span>
+            <span class="eyebrow" data-lang="pt_PT">Suporte</span>
+            <h2 data-lang="en_US">We are here to help</h2>
+            <h2 data-lang="pt_PT">Estamos aqui para ajudar</h2>
+            <p data-lang="en_US">Get assistance with technical questions and feature requests.</p>
+            <p data-lang="pt_PT">Obtenha assistência com questões técnicas e pedidos de funcionalidades.</p>
+          </div>
 
-      <section class="list-shell" data-reveal>
-        <div class="list-core">
-          <article class="list-item">
-            <h3 data-lang="en_US">Contact channels</h3>
-            <h3 data-lang="pt_PT">Canais de contacto</h3>
-            <p>
-              Email: <a href="mailto:support@djubi.app">support@djubi.app</a><br />
-              GitHub: <a href="https://github.com/Costa0910/djubi/issues" target="_blank" rel="noopener">Costa0910/djubi/issues</a>
-            </p>
-          </article>
+          <div class="two-col">
+            <!-- Contact Methods -->
+            <div class="list-card" data-reveal>
+              <div class="list-card-header">
+                <span class="eyebrow" data-lang="en_US">Contact</span>
+                <span class="eyebrow" data-lang="pt_PT">Contacto</span>
+                <h2 data-lang="en_US">Get in Touch</h2>
+                <h2 data-lang="pt_PT">Entre em Contacto</h2>
+              </div>
+              <div class="list-card-body">
+                <div class="list-item">
+                  <h3 data-lang="en_US">Email Support</h3>
+                  <h3 data-lang="pt_PT">Suporte por Email</h3>
+                  <p data-lang="en_US">For general inquiries and support requests, email us at <a href="mailto:support@djubi.app">support@djubi.app</a>.</p>
+                  <p data-lang="pt_PT">Para questões gerais e pedidos de suporte, envie email para <a href="mailto:support@djubi.app">support@djubi.app</a>.</p>
+                </div>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">What to include</h3>
-            <h3 data-lang="pt_PT">O que incluir</h3>
-            <p data-lang="en_US">App version, platform (macOS/iOS), source type (M3U/Xtream), and a clear description of the issue with screenshots when possible.</p>
-            <p data-lang="pt_PT">Versão da app, plataforma (macOS/iOS), tipo de origem (M3U/Xtream) e uma descrição clara do problema com capturas quando possível.</p>
-          </article>
+                <div class="list-item">
+                  <h3 data-lang="en_US">GitHub Issues</h3>
+                  <h3 data-lang="pt_PT">Issues GitHub</h3>
+                  <p data-lang="en_US">Report bugs and request features on our <a href="https://github.com/Costa0910/djubi/issues" target="_blank" rel="noopener">GitHub repository</a>.</p>
+                  <p data-lang="pt_PT">Reporte bugs e peça funcionalidades no nosso <a href="https://github.com/Costa0910/djubi/issues" target="_blank" rel="noopener">repositório GitHub</a>.</p>
+                </div>
 
-          <article class="list-item">
-            <h3 data-lang="en_US">Response time</h3>
-            <h3 data-lang="pt_PT">Tempo de resposta</h3>
-            <p data-lang="en_US">Requests are handled by severity and submission order. Most issues receive a response within 48 hours.</p>
-            <p data-lang="pt_PT">Os pedidos são tratados por severidade e ordem de submissão. A maioria dos problemas recebe resposta em 48 horas.</p>
-          </article>
+                <div class="list-item">
+                  <h3 data-lang="en_US">Response Time</h3>
+                  <h3 data-lang="pt_PT">Tempo de Resposta</h3>
+                  <p data-lang="en_US">Requests are prioritized by severity. Most issues receive a response within 48 hours.</p>
+                  <p data-lang="pt_PT">Pedidos são priorizados por severidade. A maioria recebe resposta em 48 horas.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- What to Include -->
+            <div class="list-card" data-reveal data-reveal-delay="100">
+              <div class="list-card-header">
+                <span class="eyebrow" data-lang="en_US">Bug Reports</span>
+                <span class="eyebrow" data-lang="pt_PT">Reportar Bugs</span>
+                <h2 data-lang="en_US">What to Include</h2>
+                <h2 data-lang="pt_PT">O Que Incluir</h2>
+              </div>
+              <div class="list-card-body">
+                <div class="list-item">
+                  <h3 data-lang="en_US">App Version</h3>
+                  <h3 data-lang="pt_PT">Versão da App</h3>
+                  <p data-lang="en_US">Include the exact version number from Settings &gt; About in the app.</p>
+                  <p data-lang="pt_PT">Inclua o número de versão exato de Definições &gt; Sobre na app.</p>
+                </div>
+
+                <div class="list-item">
+                  <h3 data-lang="en_US">Platform Details</h3>
+                  <h3 data-lang="pt_PT">Detalhes da Plataforma</h3>
+                  <p data-lang="en_US">Specify macOS or iOS version, and device model (e.g., MacBook Pro M2, iPhone 15).</p>
+                  <p data-lang="pt_PT">Especifique a versão macOS ou iOS e modelo do dispositivo (ex: MacBook Pro M2, iPhone 15).</p>
+                </div>
+
+                <div class="list-item">
+                  <h3 data-lang="en_US">Source Type</h3>
+                  <h3 data-lang="pt_PT">Tipo de Fonte</h3>
+                  <p data-lang="en_US">Indicate whether you are using M3U, M3U8, or Xtream Codes API.</p>
+                  <p data-lang="pt_PT">Indique se está a usar M3U, M3U8 ou Xtream Codes API.</p>
+                </div>
+
+                <div class="list-item">
+                  <h3 data-lang="en_US">Screenshots</h3>
+                  <h3 data-lang="pt_PT">Capturas de Ecrã</h3>
+                  <p data-lang="en_US">Include screenshots or screen recordings when possible to help us understand the issue.</p>
+                  <p data-lang="pt_PT">Inclua capturas de ecrã ou gravações quando possível para nos ajudar a compreender o problema.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container"><p data-i18n="footerText"></p></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="public/logo.svg" alt="Djubi" />
+            <span data-i18n="brandName"></span>
+          </div>
+          <p class="footer-text" data-i18n="footerText"></p>
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+            <a href="https://github.com/Costa0910/djubi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
