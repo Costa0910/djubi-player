@@ -1,6 +1,6 @@
 /**
  * Djubi Player - Main JavaScript
- * Handles translations, mobile menu, and reveal animations
+ * Handles translations, mobile menu, animations, and interactions
  */
 
 const translations = {
@@ -14,7 +14,7 @@ const translations = {
     navFaq: "FAQ",
     navPrivacy: "Privacy",
     navSupport: "Support",
-    footerText: "Djubi Player. Built for Apple users.",
+    footerText: "Built for Apple users.",
     ctaDownload: "Download",
     ctaScreens: "View screenshots"
   },
@@ -28,7 +28,7 @@ const translations = {
     navFaq: "FAQ",
     navPrivacy: "Privacidade",
     navSupport: "Suporte",
-    footerText: "Djubi Player. Criado para utilizadores Apple.",
+    footerText: "Criado para utilizadores Apple.",
     ctaDownload: "Transferir",
     ctaScreens: "Ver capturas"
   }
@@ -171,12 +171,171 @@ function setupRevealAnimations() {
       });
     },
     { 
-      threshold: 0.15, 
-      rootMargin: "0px 0px -60px 0px" 
+      threshold: 0.1, 
+      rootMargin: "0px 0px -80px 0px" 
     }
   );
 
   nodes.forEach((node) => observer.observe(node));
+}
+
+/**
+ * Setup header scroll behavior
+ */
+function setupHeaderScroll() {
+  const header = document.querySelector('.floating-header');
+  if (!header) return;
+
+  let lastScroll = 0;
+  let ticking = false;
+
+  const updateHeader = () => {
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll > 100) {
+      header.style.transform = currentScroll > lastScroll ? 'translateY(-100%)' : 'translateY(0)';
+    } else {
+      header.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Add transition for smooth hide/show
+  header.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+}
+
+/**
+ * Setup smooth scroll for anchor links
+ */
+function setupSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+}
+
+/**
+ * Add interactive hover effects to cards
+ */
+function setupCardInteractions() {
+  const cards = document.querySelectorAll('.feature-card, .platform-card, .gallery-item, .faq-item');
+  
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transition = 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+    });
+  });
+}
+
+/**
+ * Animate stats on scroll
+ */
+function setupStatsAnimation() {
+  const stats = document.querySelectorAll('.stat-value');
+  if (!stats.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  stats.forEach(stat => observer.observe(stat));
+}
+
+/**
+ * Multi-view demo animation
+ */
+function setupMultiviewDemo() {
+  const cells = document.querySelectorAll('.multiview-cell');
+  if (!cells.length) return;
+
+  let activeIndex = 0;
+  
+  const cycleActive = () => {
+    cells.forEach((cell, index) => {
+      cell.classList.toggle('active', index === activeIndex);
+    });
+    activeIndex = (activeIndex + 1) % cells.length;
+  };
+
+  // Cycle through cells every 2 seconds
+  setInterval(cycleActive, 2000);
+}
+
+/**
+ * Setup lightbox for screenshot gallery
+ */
+function setupLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  
+  if (!lightbox || !triggers.length) return;
+
+  const openLightbox = (img) => {
+    const src = img.src;
+    const captionKey = locale === 'pt_PT' ? 'captionPt' : 'captionEn';
+    const caption = img.dataset[captionKey] || img.alt;
+    
+    lightboxImage.src = src;
+    lightboxImage.alt = img.alt;
+    lightboxCaption.textContent = caption;
+    
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => openLightbox(trigger));
+    trigger.style.cursor = 'zoom-in';
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
 }
 
 /**
@@ -187,4 +346,26 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTranslations();
   setupMobileMenu();
   setupRevealAnimations();
+  setupHeaderScroll();
+  setupSmoothScroll();
+  setupCardInteractions();
+  setupStatsAnimation();
+  setupMultiviewDemo();
+  setupLightbox();
 });
+
+// Add CSS keyframes for stats animation
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+document.head.appendChild(style);

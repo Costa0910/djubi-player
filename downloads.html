@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download - Djubi Player</title>
     <meta name="description" content="Download Djubi Player for macOS, iPhone, and iPad. Universal build for Apple Silicon and Intel." />
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg" aria-hidden="true">
+      <div class="gradient-orb gradient-orb-1"></div>
+      <div class="gradient-orb gradient-orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
     <header class="floating-header">
-      <div class="nav-island shell">
-        <div class="core nav-core">
+      <div class="nav-island">
+        <div class="nav-core">
           <a class="brand" href="index.html">
             <img src="public/logo.svg" alt="Djubi" class="brand-logo" />
-            <span><h1 data-i18n="brandName"></h1></span>
+            <h1 data-i18n="brandName"></h1>
           </a>
           <nav class="nav-links">
             <a href="index.html" data-i18n="navHome"></a>
@@ -23,7 +30,6 @@
             <a class="active" href="downloads.html" data-i18n="navDownloads"></a>
             <a href="web.html" data-i18n="navWeb"></a>
             <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
             <a href="support.html" data-i18n="navSupport"></a>
           </nav>
           <div class="header-actions">
@@ -34,81 +40,141 @@
       </div>
     </header>
 
+    <!-- Mobile Menu -->
     <div id="mobileOverlay" class="mobile-overlay">
-      <div class="mobile-menu shell">
-        <div class="core">
-          <nav class="mobile-menu-links">
-            <a href="index.html" data-i18n="navHome"></a>
-            <a href="screenshots.html" data-i18n="navScreenshots"></a>
-            <a class="active" href="downloads.html" data-i18n="navDownloads"></a>
-            <a href="web.html" data-i18n="navWeb"></a>
-            <a href="faq.html" data-i18n="navFaq"></a>
-            <a href="privacy.html" data-i18n="navPrivacy"></a>
-            <a href="support.html" data-i18n="navSupport"></a>
-          </nav>
-        </div>
+      <div class="mobile-menu">
+        <nav class="mobile-menu-links">
+          <a href="index.html" data-i18n="navHome"></a>
+          <a href="screenshots.html" data-i18n="navScreenshots"></a>
+          <a class="active" href="downloads.html" data-i18n="navDownloads"></a>
+          <a href="web.html" data-i18n="navWeb"></a>
+          <a href="faq.html" data-i18n="navFaq"></a>
+          <a href="privacy.html" data-i18n="navPrivacy"></a>
+          <a href="support.html" data-i18n="navSupport"></a>
+        </nav>
       </div>
     </div>
 
     <div class="top-spacer"></div>
 
-    <main class="container section">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow" data-lang="en_US">Distribution</span>
-        <span class="eyebrow" data-lang="pt_PT">Distribuição</span>
-        <h2 data-lang="en_US">Download Djubi Player</h2>
-        <h2 data-lang="pt_PT">Transferir Djubi Player</h2>
-        <p data-lang="en_US">Choose your platform and get started in minutes.</p>
-        <p data-lang="pt_PT">Escolha a sua plataforma e comece em minutos.</p>
-      </div>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow" data-lang="en_US">Download</span>
+            <span class="eyebrow" data-lang="pt_PT">Transferir</span>
+            <h2 data-lang="en_US">Get Djubi Player</h2>
+            <h2 data-lang="pt_PT">Obter Djubi Player</h2>
+            <p data-lang="en_US">Choose your platform and start streaming in minutes.</p>
+            <p data-lang="pt_PT">Escolha a sua plataforma e comece a transmitir em minutos.</p>
+          </div>
 
-      <section class="list-shell" data-reveal>
-        <div class="list-core">
-          <article class="list-item">
-            <div class="split-line">
-              <div>
-                <h3 data-lang="en_US">macOS</h3>
-                <h3 data-lang="pt_PT">macOS</h3>
+          <div class="platform-grid">
+            <!-- macOS -->
+            <article class="platform-card" data-reveal>
+              <div class="platform-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8"/>
+                  <path d="M12 17v4"/>
+                </svg>
               </div>
-              <a class="btn primary" href="https://github.com/Costa0910/djubi/releases" target="_blank" rel="noopener">
-                <span data-lang="en_US">Get build</span>
-                <span data-lang="pt_PT">Obter build</span>
-                <span class="btn-icon" aria-hidden="true">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <h3>macOS</h3>
+              <p data-lang="en_US">Universal build for Apple Silicon and Intel machines. Requires macOS 14 Sonoma or later.</p>
+              <p data-lang="pt_PT">Build universal para Apple Silicon e Intel. Requer macOS 14 Sonoma ou posterior.</p>
+              <a class="btn accent" href="https://github.com/Costa0910/djubi/releases" target="_blank" rel="noopener" style="margin-top: var(--space-lg);">
+                <span data-lang="en_US">Download for Mac</span>
+                <span data-lang="pt_PT">Transferir para Mac</span>
+                <span class="btn-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
                   </svg>
                 </span>
               </a>
-            </div>
-            <p data-lang="en_US">Universal build for Apple Silicon and Intel machines.</p>
-            <p data-lang="pt_PT">Build universal para Apple Silicon e Intel.</p>
-          </article>
+            </article>
 
-          <article class="list-item">
-            <div class="split-line">
-              <div>
+            <!-- iPhone -->
+            <article class="platform-card" data-reveal data-reveal-delay="100">
+              <div class="platform-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2"/>
+                  <path d="M12 18h.01"/>
+                </svg>
+              </div>
+              <h3>iPhone</h3>
+              <p data-lang="en_US">Touch-optimized interface with synchronized settings across devices. Requires iOS 16+.</p>
+              <p data-lang="pt_PT">Interface otimizada para toque com definições sincronizadas. Requer iOS 16+.</p>
+              <span class="platform-badge coming" data-lang="en_US" style="margin-top: var(--space-lg);">Coming soon</span>
+              <span class="platform-badge coming" data-lang="pt_PT" style="margin-top: var(--space-lg);">Em breve</span>
+            </article>
+
+            <!-- iPad -->
+            <article class="platform-card" data-reveal data-reveal-delay="200">
+              <div class="platform-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2"/>
+                  <path d="M12 18h.01"/>
+                </svg>
+              </div>
+              <h3>iPad</h3>
+              <p data-lang="en_US">Big screen experience with Split View and Slide Over support. Requires iPadOS 16+.</p>
+              <p data-lang="pt_PT">Experiência em ecrã grande com suporte Split View e Slide Over. Requer iPadOS 16+.</p>
+              <span class="platform-badge coming" data-lang="en_US" style="margin-top: var(--space-lg);">Coming soon</span>
+              <span class="platform-badge coming" data-lang="pt_PT" style="margin-top: var(--space-lg);">Em breve</span>
+            </article>
+          </div>
+
+          <!-- Requirements -->
+          <div class="list-card" style="margin-top: var(--space-3xl);" data-reveal>
+            <div class="list-card-header">
+              <span class="eyebrow" data-lang="en_US">Requirements</span>
+              <span class="eyebrow" data-lang="pt_PT">Requisitos</span>
+              <h2 data-lang="en_US">System Requirements</h2>
+              <h2 data-lang="pt_PT">Requisitos de Sistema</h2>
+            </div>
+            <div class="list-card-body">
+              <div class="list-item">
+                <h3 data-lang="en_US">macOS</h3>
+                <h3 data-lang="pt_PT">macOS</h3>
+                <p data-lang="en_US">macOS 14 Sonoma or later. Universal binary supports both Apple Silicon (M1/M2/M3) and Intel processors.</p>
+                <p data-lang="pt_PT">macOS 14 Sonoma ou posterior. Binário universal suporta Apple Silicon (M1/M2/M3) e processadores Intel.</p>
+              </div>
+              <div class="list-item">
                 <h3 data-lang="en_US">iOS / iPadOS</h3>
                 <h3 data-lang="pt_PT">iOS / iPadOS</h3>
+                <p data-lang="en_US">iOS 16 or later for iPhone. iPadOS 16 or later for iPad. Compatible with all devices supporting these OS versions.</p>
+                <p data-lang="pt_PT">iOS 16 ou posterior para iPhone. iPadOS 16 ou posterior para iPad. Compatível com todos os dispositivos que suportam estas versões.</p>
               </div>
-              <span class="badge" data-lang="en_US">Coming soon</span>
-              <span class="badge" data-lang="pt_PT">Em breve</span>
+              <div class="list-item">
+                <h3 data-lang="en_US">Network</h3>
+                <h3 data-lang="pt_PT">Rede</h3>
+                <p data-lang="en_US">Stable internet connection required. Recommended minimum 10 Mbps for HD streaming, 25 Mbps for 4K content.</p>
+                <p data-lang="pt_PT">Conexão de internet estável necessária. Mínimo recomendado de 10 Mbps para HD, 25 Mbps para conteúdo 4K.</p>
+              </div>
             </div>
-            <p data-lang="en_US">Touch-optimized interface with synchronized settings and playback behavior.</p>
-            <p data-lang="pt_PT">Interface otimizada para toque com definições sincronizadas e comportamento de reprodução consistente.</p>
-          </article>
-
-          <article class="list-item">
-            <h3 data-lang="en_US">System requirements</h3>
-            <h3 data-lang="pt_PT">Requisitos de sistema</h3>
-            <p data-lang="en_US">macOS 14+ and iOS 16+ are required for current production builds.</p>
-            <p data-lang="pt_PT">macOS 14+ e iOS 16+ são necessários para os builds de produção atuais.</p>
-          </article>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container"><p data-i18n="footerText"></p></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="public/logo.svg" alt="Djubi" />
+            <span data-i18n="brandName"></span>
+          </div>
+          <p class="footer-text" data-i18n="footerText"></p>
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="navPrivacy"></a>
+            <a href="support.html" data-i18n="navSupport"></a>
+            <a href="https://github.com/Costa0910/djubi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
