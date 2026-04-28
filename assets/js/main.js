@@ -14,9 +14,10 @@ const translations = {
     navFaq: "FAQ",
     navPrivacy: "Privacy",
     navTerms: "Terms",
+    navAbout: "About",
     navSupport: "Support",
     navResources: "Resources",
-    footerText: "Built for Apple users.",
+    footerText: "© 2026 Djubi Player. Vibe Coded with love in Portugal.",
     ctaDownload: "Download",
     ctaScreens: "View screenshots"
   },
@@ -30,9 +31,10 @@ const translations = {
     navFaq: "FAQ",
     navPrivacy: "Privacidade",
     navTerms: "Termos",
+    navAbout: "Sobre",
     navSupport: "Suporte",
     navResources: "Recursos",
-    footerText: "Criado para utilizadores Apple.",
+    footerText: "© 2026 Djubi Player. Vibe Coded with love in Portugal.",
     ctaDownload: "Transferir",
     ctaScreens: "Ver capturas"
   }
@@ -343,6 +345,157 @@ function setupLightbox() {
 }
 
 /**
+ * Interactive Screenshot Gallery
+ */
+function setupGallery() {
+  const stage = document.getElementById('galleryStage');
+  const dotsContainer = document.getElementById('galleryDots');
+  const toggles = document.querySelectorAll('.gallery-toggle');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  if (!stage) return;
+
+  const screenshots = {
+    mac: [
+      { 
+        src: 'assets/screenshots/mac/mac-channels-list-en.png', 
+        caption: { en: 'Channels List - 120fps scrolling through 50,000+ channels', pt: 'Lista de Canais - Scroll a 120fps em 50.000+ canais' },
+        type: 'mac'
+      },
+      { 
+        src: 'assets/screenshots/mac/player-en.png', 
+        caption: { en: 'Player - Immersive native playback with multiple engines', pt: 'Player - Reprodução nativa imersiva com múltiplos motores' },
+        type: 'mac'
+      },
+      { 
+        src: 'assets/screenshots/mac/multiview-en.png', 
+        caption: { en: 'Multi-View - Watch up to 9 channels at once', pt: 'Multi-View - Assista até 9 canais de uma vez' },
+        type: 'mac'
+      }
+    ],
+    iphone: [
+      { 
+        src: 'assets/screenshots/iphone/channels-list-en.png', 
+        caption: { en: 'iPhone - Elegant touch-optimized navigation', pt: 'iPhone - Navegação elegante otimizada para toque' },
+        type: 'phone'
+      },
+      { 
+        src: 'assets/screenshots/iphone/player-en.png', 
+        caption: { en: 'iPhone - Pro player in your pocket', pt: 'iPhone - Player pro no seu bolso' },
+        type: 'phone'
+      },
+      { 
+        src: 'assets/screenshots/iphone/settings-en.png', 
+        caption: { en: 'iPhone - Full control and iCloud sync', pt: 'iPhone - Controlo total e sincronização iCloud' },
+        type: 'phone'
+      }
+    ],
+    ipad: [
+      { 
+        src: 'assets/screenshots/ipad/channels-list-en.png', 
+        caption: { en: 'iPad - Big screen channel management', pt: 'iPad - Gestão de canais em ecrã grande' },
+        type: 'tablet'
+      },
+      { 
+        src: 'assets/screenshots/ipad/player-en.png', 
+        caption: { en: 'iPad - Immersive tablet experience', pt: 'iPad - Experiência imersiva em tablet' },
+        type: 'tablet'
+      }
+    ]
+  };
+
+  let currentDevice = 'mac';
+  let currentIndex = 0;
+
+  function renderGallery() {
+    const items = screenshots[currentDevice];
+    const lang = locale === 'pt_PT' ? 'pt' : 'en';
+
+    // Update Stage
+    stage.innerHTML = items.map((item, index) => {
+      let windowClass = 'integrated-app-window';
+      let chrome = `
+        <div class="window-chrome">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="window-title">${item.type === 'mac' ? 'Djubi Player' : 'Djubi'}</div>
+        </div>
+      `;
+
+      if (item.type === 'phone') {
+        windowClass = 'integrated-window-phone';
+        chrome = ''; // Phone has its own notch style in CSS
+      } else if (item.type === 'tablet') {
+        windowClass = 'integrated-window-tablet';
+        chrome = ''; // Tablet has its own bezel style in CSS
+      }
+
+      return `
+        <div class="gallery-item ${index === currentIndex ? 'active' : ''} ${index === currentIndex - 1 ? 'prev' : ''}">
+          <div class="${windowClass}">
+            ${chrome}
+            <div class="window-content">
+              <img src="${item.src}" alt="${item.caption[lang]}">
+            </div>
+          </div>
+          <p class="gallery-caption" style="margin-top: 2rem; color: var(--text-secondary); text-align: center; max-width: 600px;">
+            ${item.caption[lang]}
+          </p>
+        </div>
+      `;
+    }).join('');
+
+    // Update Dots
+    dotsContainer.innerHTML = items.map((_, index) => `
+      <div class="gallery-dot ${index === currentIndex ? 'active' : ''}" data-index="${index}"></div>
+    `).join('');
+
+    // Re-bind dots
+    document.querySelectorAll('.gallery-dot').forEach(dot => {
+      dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.dataset.index);
+        renderGallery();
+      });
+    });
+  }
+
+  function changeSlide(direction) {
+    const items = screenshots[currentDevice];
+    if (direction === 'next') {
+      currentIndex = (currentIndex + 1) % items.length;
+    } else {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+    }
+    renderGallery();
+  }
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      toggles.forEach(t => t.classList.remove('active'));
+      toggle.classList.add('active');
+      currentDevice = toggle.dataset.device;
+      currentIndex = 0;
+      renderGallery();
+    });
+  });
+
+  prevBtn.addEventListener('click', () => changeSlide('prev'));
+  nextBtn.addEventListener('click', () => changeSlide('next'));
+
+  // Auto-render
+  renderGallery();
+
+  // Handle locale changes (re-render)
+  document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => setTimeout(renderGallery, 50));
+  });
+}
+
+/**
  * Initialize when DOM is ready
  */
 document.addEventListener("DOMContentLoaded", () => {
@@ -356,6 +509,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupStatsAnimation();
   setupMultiviewDemo();
   setupLightbox();
+  setupGallery();
 });
 
 // Add CSS keyframes for stats animation

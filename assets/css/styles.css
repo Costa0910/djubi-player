@@ -5,8 +5,8 @@
 
 :root {
   /* Dark Premium Palette */
-  --bg-dark: #000000;
-  --bg-elevated: #0d0d0d;
+  --bg-dark: #050505;
+  --bg-elevated: #0a0a0a;
   --bg-card: #141414;
   --bg-card-hover: #1a1a1a;
   --surface: #1c1c1e;
@@ -44,8 +44,8 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
-  --space-4xl: 6rem;
-  --space-5xl: 8rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
   
   /* Radius */
   --radius-sm: 8px;
@@ -159,8 +159,8 @@ button {
 .gradient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.5;
+  filter: blur(140px);
+  opacity: 0.15;
   animation: float 20s ease-in-out infinite;
 }
 
@@ -181,18 +181,6 @@ button {
   left: -100px;
   animation-delay: -7s;
 }
-
-.gradient-orb-3 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, var(--teal) 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.3;
-  animation-delay: -14s;
-}
-
 @keyframes float {
   0%, 100% { transform: translate(0, 0) scale(1); }
   25% { transform: translate(30px, -30px) scale(1.05); }
@@ -274,11 +262,6 @@ button {
 .nav-links a:hover {
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.08);
-}
-
-.nav-links a.active {
-  color: var(--text-primary);
-  font-weight: 500;
 }
 
 /* Header Actions */
@@ -450,6 +433,7 @@ button {
   max-width: 900px;
   margin-inline: auto;
   padding-inline: var(--space-lg);
+  margin-top: 3.5rem;
 }
 
 .hero-badge {
@@ -676,7 +660,7 @@ button {
    ========================================================================== */
 
 .stats-bar {
-  padding: var(--space-3xl) 0;
+  padding: 100px 0 var(--space-3xl);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: var(--bg-elevated);
@@ -714,7 +698,9 @@ button {
    ========================================================================== */
 
 .section {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-4xl) 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-header {
@@ -895,16 +881,6 @@ button {
 .feature-list-item span {
   color: var(--text-secondary);
   font-size: 0.9375rem;
-}
-
-.feature-large-visual {
-  position: relative;
-}
-
-.feature-large-visual img {
-  width: 100%;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
 }
 
 /* Multi-view Grid Demo */
@@ -2268,15 +2244,6 @@ button {
   letter-spacing: -0.05em;
 }
 
-/* Section Spacing Fixes */
-.section {
-  padding: var(--space-5xl) 0;
-}
-
-.section-header {
-  margin-bottom: var(--space-3xl);
-}
-
 /* Feature Cards Polish */
 .feature-card {
   border-color: rgba(255, 255, 255, 0.05);
@@ -2312,5 +2279,418 @@ button {
 ::selection {
   background: var(--accent-glow);
   color: var(--text-primary);
+}
+
+
+/* ==========================================================================
+   Human-Made Tasteful Design & connectivity
+   ========================================================================== */
+
+/* Subtle Background Pattern */
+.gradient-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* Tasteful Section Connectivity */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Unified Screenshots Gallery */
+.gallery-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  z-index: 20;
+}
+
+.gallery-toggle {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: 100px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.gallery-toggle.active {
+  background: var(--accent-soft);
+  color: var(--accent-bright);
+  border-color: var(--accent-bright);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.gallery-stage {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.gallery-item {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100px) rotateY(-20deg) scale(0.9);
+  transition: all var(--duration-slow) var(--ease-spring);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) rotateY(0) scale(1);
+  z-index: 2;
+}
+
+.gallery-item.prev {
+  opacity: 0;
+  visibility: visible;
+  transform: translateX(-100px) rotateY(20deg) scale(0.9);
+  z-index: 1;
+}
+
+.gallery-controls {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.gallery-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.gallery-btn:hover {
+  background: var(--accent-bright);
+  transform: scale(1.1);
+}
+
+.gallery-dots {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.gallery-dot.active {
+  background: var(--accent-bright);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Apple-Style Integrated Screenshots
+   ========================================================================== */
+
+.feature-large-visual {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.feature-large-visual:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.feature-large-visual .device-frame-mac {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ==========================================================================
+   Header Active State Highlight
+   ========================================================================== */
+
+.nav-links a {
+  position: relative;
+  opacity: 0.7;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.nav-links a.active {
+  color: var(--accent-bright) !important;
+  opacity: 1;
+  background: var(--accent-soft);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--space-md);
+  right: var(--space-md);
+  height: 2px;
+  background: var(--accent-bright);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* ==========================================================================
+   Centering Download Cards
+   ========================================================================== */
+
+.platform-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xl);
+}
+
+.platform-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+}
+
+
+/* ==========================================================================
+   Integrated App Visuals (Human-Made & Blended)
+   ========================================================================== */
+
+.hero-showcase {
+  width: 100%;
+  max-width: 1100px;
+  margin: var(--space-3xl) auto -100px;
+  padding: 0 var(--space-lg);
+  perspective: 2000px;
+  z-index: 10;
+}
+
+.integrated-app-window {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 
+              0 0 0 1px var(--border);
+  overflow: hidden;
+  transform: rotateX(5deg);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.integrated-app-window:hover {
+  transform: rotateX(0deg) translateY(-10px);
+}
+
+.window-chrome {
+  height: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-md);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.window-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.window-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f57; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #28c940; }
+
+.window-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.window-content {
+  position: relative;
+  background: #000;
+}
+
+.window-content img {
+  width: 100%;
+  display: block;
+}
+
+/* Feature visuals tightening */
+.feature-large {
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.feature-large-content {
+  padding: var(--space-xl) 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-showcase {
+    margin-top: var(--space-xl);
+  }
+  
+  .hero-showcase > div {
+    flex-direction: column;
+    align-items: center !important;
+  }
+
+  .integrated-window-phone, 
+  .integrated-window-tablet {
+    display: none; /* Hide secondary devices on smaller screens for focus */
+  }
+
+  .integrated-app-window {
+    transform: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   Device-Specific Integrated Windows
+   ========================================================================== */
+
+/* Integrated Phone Window */
+.integrated-window-phone {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 9 / 19.5;
+  background: #000;
+  border: 10px solid #121212;
+  border-radius: 36px;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.integrated-window-phone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 20px;
+  background: #121212;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 10;
+}
+
+.integrated-window-phone img {
+  width: 100%;
+  height: calc(100% - 20px);
+  margin-top: 20px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Integrated Tablet Window */
+.integrated-window-tablet {
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  border: 14px solid #121212;
+  border-radius: 20px;
+  box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.integrated-window-tablet img {
+  width: 100%;
+  height: calc(100% - 15px);
+  margin-top: 15px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.integrated-window-tablet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Gallery integration fix - making images larger but constrained by height */
+.gallery-item .integrated-app-window,
+.gallery-item .integrated-window-phone,
+.gallery-item .integrated-window-tablet {
+  max-width: 90% !important;
+  max-height: 480px;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 

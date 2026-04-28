@@ -7,7 +7,7 @@
     <meta name="description" content="Experience IPTV like never before. Djubi Player is the lightning-fast, native solution for your Mac, iPhone, and iPad. Handle 50,000+ channels with ease." />
     <meta name="theme-color" content="#000000" />
     <meta property="og:title" content="Djubi Player - Native IPTV for Apple" />
-    <meta property="og:description" content="Lightning-fast, native IPTV player for macOS, iPhone, and iPad. Built with Swift 6." />
+    <meta property="og:description" content="Lightning-fast, native IPTV player for macOS, iPhone, and iPad." />
     <meta property="og:type" content="website" />
     <link rel="icon" href="public/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -17,7 +17,6 @@
     <div class="gradient-bg" aria-hidden="true">
       <div class="gradient-orb gradient-orb-1"></div>
       <div class="gradient-orb gradient-orb-2"></div>
-      <div class="gradient-orb gradient-orb-3"></div>
     </div>
 
     <!-- Navigation -->
@@ -44,6 +43,7 @@
                 <a href="faq.html" data-i18n="navFaq"></a>
                 <a href="privacy.html" data-i18n="navPrivacy"></a>
                 <a href="terms.html" data-i18n="navTerms"></a>
+                <a href="about.html" data-i18n="navAbout"></a>
               </div>
             </div>
           </nav>
@@ -72,6 +72,7 @@
           <a href="faq.html" data-i18n="navFaq"></a>
           <a href="privacy.html" data-i18n="navPrivacy"></a>
           <a href="terms.html" data-i18n="navTerms"></a>
+          <a href="about.html" data-i18n="navAbout"></a>
           <a href="support.html" data-i18n="navSupport"></a>
         </nav>
       </div>
@@ -81,16 +82,6 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="hero-content" data-reveal>
-          <div class="hero-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
-            <span data-lang="en_US">Built with Swift 6</span>
-            <span data-lang="pt_PT">Criado com Swift 6</span>
-          </div>
-          
           <h2>
             <span data-lang="en_US">IPTV that feels <span class="hero-highlight">native.</span></span>
             <span data-lang="pt_PT">IPTV com experiência <span class="hero-highlight">nativa.</span></span>
@@ -126,31 +117,35 @@
           </div>
         </div>
 
-        <!-- Device Showcase -->
+        <!-- Integrated App Showcase -->
         <div class="hero-showcase" data-reveal data-reveal-delay="200">
-          <div class="device-grid">
-            <div class="device-mac">
-              <div class="device-mac-topbar">
-                <div class="device-mac-dot red"></div>
-                <div class="device-mac-dot yellow"></div>
-                <div class="device-mac-dot green"></div>
-              </div>
-              <div class="device-mac-content">
-                <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Djubi Player on macOS" />
+          <div style="display: flex; align-items: flex-end; gap: var(--space-xl); justify-content: center;">
+            <!-- Phone -->
+            <div class="integrated-window-phone" style="transform: rotate(-5deg) translateX(20px); z-index: 5;">
+              <div class="window-content">
+                <img src="assets/screenshots/iphone/player-en.png" data-src-en="assets/screenshots/iphone/player-en.png" data-src-pt="assets/screenshots/iphone/player-pt.png" alt="Djubi Player iPhone" />
               </div>
             </div>
-            <div class="device-phones">
-              <div class="device-phone">
-                <div class="device-phone-notch"></div>
-                <div class="device-phone-content">
-                  <img src="assets/screenshots/iphone/player-en.png" data-src-en="assets/screenshots/iphone/player-en.png" data-src-pt="assets/screenshots/iphone/player-pt.png" alt="Djubi Player on iPhone" />
+            
+            <!-- Mac -->
+            <div class="integrated-app-window" style="flex: 1; max-width: 800px; z-index: 10;">
+              <div class="window-chrome">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
                 </div>
+                <div class="window-title">Djubi Player</div>
               </div>
-              <div class="device-phone">
-                <div class="device-phone-notch"></div>
-                <div class="device-phone-content">
-                  <img src="assets/screenshots/ipad/player-en.png" data-src-en="assets/screenshots/ipad/player-en.png" data-src-pt="assets/screenshots/ipad/player-pt.png" alt="Djubi Player on iPad" />
-                </div>
+              <div class="window-content">
+                <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Djubi Player Mac" />
+              </div>
+            </div>
+
+            <!-- Tablet/iPad -->
+            <div class="integrated-window-tablet" style="width: 300px; transform: rotate(5deg) translateX(-20px); z-index: 5;">
+              <div class="window-content">
+                <img src="assets/screenshots/ipad/player-en.png" data-src-en="assets/screenshots/ipad/player-en.png" data-src-pt="assets/screenshots/ipad/player-pt.png" alt="Djubi Player iPad" />
               </div>
             </div>
           </div>
@@ -177,7 +172,7 @@
               <div class="stat-label" data-lang="pt_PT">Streams simultâneos</div>
             </div>
             <div class="stat-item">
-              <div class="stat-value">3</div>
+              <div class="stat-value">2</div>
               <div class="stat-label" data-lang="en_US">Playback engines</div>
               <div class="stat-label" data-lang="pt_PT">Motores de reprodução</div>
             </div>
@@ -194,10 +189,10 @@
             <h2 data-lang="en_US">Everything you need for professional IPTV</h2>
             <h2 data-lang="pt_PT">Tudo o que precisa para IPTV profissional</h2>
             <p data-lang="en_US">
-              Built from the ground up with Swift 6 and AppKit/SwiftUI for the most fluid experience on Apple platforms.
+              Built from the ground up with AppKit/SwiftUI for the most fluid experience on Apple platforms.
             </p>
             <p data-lang="pt_PT">
-              Construído de raiz com Swift 6 e AppKit/SwiftUI para a experiência mais fluída em plataformas Apple.
+              Construído de raiz com AppKit/SwiftUI para a experiência mais fluída em plataformas Apple.
             </p>
           </div>
 
@@ -332,14 +327,16 @@
               </div>
             </div>
             <div class="feature-large-visual">
-              <div class="device-frame-mac">
-                <div class="device-frame-mac-bar">
-                  <div class="device-dot red"></div>
-                  <div class="device-dot yellow"></div>
-                  <div class="device-dot green"></div>
-                  <span class="device-title">Multi-View</span>
+              <div class="integrated-app-window" style="transform: perspective(1000px) rotateY(-5deg);">
+                <div class="window-chrome">
+                  <div class="window-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="window-title">Multi-View</div>
                 </div>
-                <div class="device-frame-mac-screen">
+                <div class="window-content">
                   <img src="assets/screenshots/mac/multiview-en.png" data-src-en="assets/screenshots/mac/multiview-en.png" data-src-pt="assets/screenshots/mac/multiview-pt.png" alt="Multi-View in action" />
                 </div>
               </div>
@@ -358,10 +355,10 @@
               <h3 data-lang="en_US">Professional-grade engines</h3>
               <h3 data-lang="pt_PT">Motores de nível profissional</h3>
               <p data-lang="en_US">
-                Toggle between VLCKit, AVPlayer, and libmpv engines for maximum compatibility with any stream format. Automatic fallback ensures uninterrupted viewing.
+                Toggle between VLCKit and AVPlayer engines for maximum compatibility with any stream format. Automatic fallback ensures uninterrupted viewing.
               </p>
               <p data-lang="pt_PT">
-                Alterne entre motores VLCKit, AVPlayer e libmpv para máxima compatibilidade com qualquer formato de stream. Fallback automático garante visualização ininterrupta.
+                Alterne entre motores VLCKit e AVPlayer para máxima compatibilidade com qualquer formato de stream. Fallback automático garante visualização ininterrupta.
               </p>
               <div class="feature-list">
                 <div class="feature-list-item">
@@ -378,69 +375,23 @@
                   <span data-lang="en_US">AVPlayer for native Apple integration</span>
                   <span data-lang="pt_PT">AVPlayer para integração nativa Apple</span>
                 </div>
-                <div class="feature-list-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                  <span data-lang="en_US">libmpv for advanced control</span>
-                  <span data-lang="pt_PT">libmpv para controlo avançado</span>
-                </div>
               </div>
             </div>
             <div class="feature-large-visual">
-              <img src="assets/screenshots/mac/multiview-en.png" data-src-en="assets/screenshots/mac/multiview-en.png" data-src-pt="assets/screenshots/mac/multiview-pt.png" alt="Multi-view interface" />
+              <div class="integrated-app-window" style="transform: perspective(1000px) rotateY(5deg);">
+                <div class="window-chrome">
+                  <div class="window-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="window-title">Playback Engine</div>
+                </div>
+                <div class="window-content">
+                  <img src="assets/screenshots/mac/player-en.png" data-src-en="assets/screenshots/mac/player-en.png" data-src-pt="assets/screenshots/mac/player-pt.png" alt="Playback interface" />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Apple Native Features -->
-      <section class="section">
-        <div class="container">
-          <div class="section-header" data-reveal>
-            <span class="eyebrow" data-lang="en_US">Apple Native</span>
-            <span class="eyebrow" data-lang="pt_PT">Nativo Apple</span>
-            <h2 data-lang="en_US">First-class citizen on Apple platforms</h2>
-            <h2 data-lang="pt_PT">Cidadão de primeira classe em plataformas Apple</h2>
-            <p data-lang="en_US">
-              Djubi is not a port. It is built exclusively for macOS and iOS with native features you expect.
-            </p>
-            <p data-lang="pt_PT">
-              Djubi não é uma conversão. É construído exclusivamente para macOS e iOS com funcionalidades nativas que espera.
-            </p>
-          </div>
-
-          <div class="bento-grid">
-            <article class="bento-item span-4" data-reveal>
-              <h3 data-lang="en_US">Picture-in-Picture</h3>
-              <h3 data-lang="pt_PT">Picture-in-Picture</h3>
-              <p data-lang="en_US">Keep watching while you work. Native PiP support on all devices.</p>
-              <p data-lang="pt_PT">Continue a assistir enquanto trabalha. Suporte PiP nativo em todos os dispositivos.</p>
-            </article>
-            <article class="bento-item span-4" data-reveal data-reveal-delay="100">
-              <h3 data-lang="en_US">Siri Shortcuts</h3>
-              <h3 data-lang="pt_PT">Atalhos Siri</h3>
-              <p data-lang="en_US">Voice control your viewing experience with custom Siri commands.</p>
-              <p data-lang="pt_PT">Controle por voz a sua experiência de visualização com comandos Siri personalizados.</p>
-            </article>
-            <article class="bento-item span-4" data-reveal data-reveal-delay="200">
-              <h3 data-lang="en_US">Spotlight Search</h3>
-              <h3 data-lang="pt_PT">Pesquisa Spotlight</h3>
-              <p data-lang="en_US">Find and launch channels directly from Spotlight on your Mac.</p>
-              <p data-lang="pt_PT">Encontre e inicie canais diretamente do Spotlight no seu Mac.</p>
-            </article>
-            <article class="bento-item span-6" data-reveal>
-              <h3 data-lang="en_US">Keyboard Shortcuts</h3>
-              <h3 data-lang="pt_PT">Atalhos de Teclado</h3>
-              <p data-lang="en_US">Fully customizable keyboard shortcuts for power users. Control everything without touching your mouse.</p>
-              <p data-lang="pt_PT">Atalhos de teclado totalmente personalizáveis para utilizadores avançados. Controle tudo sem tocar no rato.</p>
-            </article>
-            <article class="bento-item span-6" data-reveal data-reveal-delay="100">
-              <h3 data-lang="en_US">Services Menu</h3>
-              <h3 data-lang="pt_PT">Menu Serviços</h3>
-              <p data-lang="en_US">Right-click any URL and select &quot;Play URL in Djubi&quot; from the Services menu. Instant playback.</p>
-              <p data-lang="pt_PT">Clique direito em qualquer URL e selecione &quot;Reproduzir URL no Djubi&quot; do menu Serviços. Reprodução instantânea.</p>
-            </article>
           </div>
         </div>
       </section>
@@ -456,6 +407,7 @@
           </div>
 
           <div class="platform-grid">
+            <!-- macOS -->
             <article class="platform-card" data-reveal>
               <div class="platform-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -465,36 +417,41 @@
                 </svg>
               </div>
               <h3>macOS</h3>
-              <p data-lang="en_US">Universal build for Apple Silicon and Intel. Requires macOS 14+.</p>
-              <p data-lang="pt_PT">Build universal para Apple Silicon e Intel. Requer macOS 14+.</p>
-              <span class="platform-badge available" data-lang="en_US">Available now</span>
-              <span class="platform-badge available" data-lang="pt_PT">Disponível agora</span>
+              <p data-lang="en_US">Universal build for Apple Silicon and Intel machines. Requires macOS 14 Sonoma or later.</p>
+              <p data-lang="pt_PT">Build universal para Apple Silicon e Intel. Requer macOS 14 Sonoma ou posterior.</p>
+              <a class="btn accent" href="https://github.com/costa0910/djubi-player/releases/latest/download/Djubi.Player.dmg" target="_blank" rel="noopener" style="margin-top: var(--space-lg);">
+                <span data-lang="en_US">Download DMG</span>
+                <span data-lang="pt_PT">Descarregar DMG</span>
+                <span class="btn-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                </span>
+              </a>
             </article>
+
+            <!-- iOS / iPadOS -->
             <article class="platform-card" data-reveal data-reveal-delay="100">
               <div class="platform-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="5" y="2" width="14" height="20" rx="2"/>
-                  <path d="M12 18h.01"/>
+                  <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"/>
+                  <path d="M12 6v6l4 2"/>
                 </svg>
               </div>
-              <h3>iPhone</h3>
-              <p data-lang="en_US">Touch-optimized interface with all the power of the desktop version.</p>
-              <p data-lang="pt_PT">Interface otimizada para toque com todo o poder da versão desktop.</p>
-              <span class="platform-badge coming" data-lang="en_US">Coming soon</span>
-              <span class="platform-badge coming" data-lang="pt_PT">Em breve</span>
-            </article>
-            <article class="platform-card" data-reveal data-reveal-delay="200">
-              <div class="platform-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="2" width="16" height="20" rx="2"/>
-                  <path d="M12 18h.01"/>
-                </svg>
-              </div>
-              <h3>iPad</h3>
-              <p data-lang="en_US">Big screen experience with multi-view and Split View support.</p>
-              <p data-lang="pt_PT">Experiência em ecrã grande com suporte multi-view e Split View.</p>
-              <span class="platform-badge coming" data-lang="en_US">Coming soon</span>
-              <span class="platform-badge coming" data-lang="pt_PT">Em breve</span>
+              <h3>iOS / iPadOS</h3>
+              <p data-lang="en_US">Native experience for iPhone and iPad. Synchronized settings and iCloud integration.</p>
+              <p data-lang="pt_PT">Experiência nativa para iPhone e iPad. Definições sincronizadas e integração iCloud.</p>
+              <a class="btn" href="#" target="_blank" rel="noopener" style="margin-top: var(--space-lg); background: #000; color: #fff; border: 1px solid rgba(255,255,255,0.1);">
+                <span data-lang="en_US">App Store</span>
+                <span data-lang="pt_PT">App Store</span>
+                <span class="btn-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .76-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.36 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                  </svg>
+                </span>
+              </a>
             </article>
           </div>
         </div>
