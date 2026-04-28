@@ -13,7 +13,9 @@ const translations = {
     navWeb: "Web",
     navFaq: "FAQ",
     navPrivacy: "Privacy",
+    navTerms: "Terms",
     navSupport: "Support",
+    navResources: "Resources",
     footerText: "Built for Apple users.",
     ctaDownload: "Download",
     ctaScreens: "View screenshots"
@@ -27,7 +29,9 @@ const translations = {
     navWeb: "Web",
     navFaq: "FAQ",
     navPrivacy: "Privacidade",
+    navTerms: "Termos",
     navSupport: "Suporte",
+    navResources: "Recursos",
     footerText: "Criado para utilizadores Apple.",
     ctaDownload: "Transferir",
     ctaScreens: "Ver capturas"
