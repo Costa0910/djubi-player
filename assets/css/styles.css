@@ -80,6 +80,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -145,6 +149,52 @@ button {
 }
 
 /* ==========================================================================
+   Top Alert Banner
+   ========================================================================== */
+
+.top-alert {
+  background: var(--accent-soft);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-accent);
+  padding: 8px 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--accent-bright);
+  width: 100%;
+  margin-bottom: var(--space-md);
+}
+
+.top-alert p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.top-alert a {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  background: var(--accent-soft);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.top-alert a:hover {
+  background: var(--accent-bright);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
    Gradient Backgrounds
    ========================================================================== */
 
@@ -198,15 +248,15 @@ button {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: var(--space-md);
+  padding: 0;
 }
 
 .nav-island {
   max-width: 900px;
-  margin-inline: auto;
+  margin: var(--space-md) auto;
   background: rgba(20, 20, 20, 0.75);
   backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   padding: var(--space-xs) var(--space-sm);
